@@ -5,7 +5,7 @@
     <ul>
       <li @click="appRoute.go('/radios')">radios</li>
     </ul>
-
+  
 
   </div>
 </template>
