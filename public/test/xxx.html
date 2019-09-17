@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="/plugin/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div>
+            支付金额：2600
+            用于余额：120
+            
+            
+            充值：1-200、2-500、3-1000
+
+            最佳方案(2600)
+    </div>
+    
+    <script>
+          function 最佳方案(充值金额, 余额, 储蓄金额充值设置){
+            储蓄金额充值设置 =  储蓄金额充值设置 ||  [
+                {id:1,money:200},
+                {id:2,money:500},
+                {id:3,money:1000},
+            ]
+            if(余额>=充值金额){
+                return true;
+            }
+            var res = [];
+            
+            shengyu = 充值金额-余额
+
+            var fangan = eachProgramme(shengyu,储蓄金额充值设置,[]);
+            
+            
+            function eachProgramme(shengyu,fangans,nowfangan){
+                //默认充值最小
+                var fangan = 0;
+
+                //循环取最大可充值金额
+                for(var x in fangans){
+                    if(shengyu > fangans[x].money){
+                       // fangan =  fangan[x].id;
+                       fangan=x;
+                    }else{
+                        break;
+                    }
+                }
+                shengyu = shengyu-fangans[fangan].money;
+                nowfangan = nowfangan.push(fangans[fangan].id);
+                if(shengyu>0){
+                    return eachProgramme(shengyu,fangans,nowfangan);
+                }
+                return nowfangan;
+            }
+
+          }  
+    </script>
+</body>
+</html>
