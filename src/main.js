@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+//
+import './assets/style/default.scss'
+
 import muloui from './../packpage/vue/index'
 
 Vue.use(muloui);
@@ -15,7 +18,7 @@ Vue.prototype.appRoute={
   go(path,params){
     params = params||{};
     router.push({ path:path,query:params }); 
-  },
+  }, 
   back(){
     if (window.history.length <= 1) {
       router.push({path:'/'})
