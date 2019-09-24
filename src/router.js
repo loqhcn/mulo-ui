@@ -51,6 +51,6 @@ export default new Router({
     { path: '/radios', component: () => import('./views/radios.vue') },
     
     { path: '/plan_tool', component: () => import('./views/tool/plan/plan.vue') },
-
+    { path: '/apitool', component: () => import('./views/tool/apitool/apitool.vue') },
   ]
 })
