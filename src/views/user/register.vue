@@ -1,5 +1,6 @@
 <template>
   <div>
+    <head-link></head-link>
     <div class="login">
       <div class="contentbox">
         <div class="ttxt flex space-between">
@@ -123,8 +124,8 @@ export default {
      *
      */
     sendCode() {
-      if (!validate.mobile(this.phone)) {
-        this.$toast("手机号不正确");
+      if (!this.phone) {
+        this.$toast("邮箱错误");
         return;
       }
       if (this.daojishi > 0) {

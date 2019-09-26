@@ -32,10 +32,15 @@
     
 }
 .login-btns{
+  margin-top: 10px;
   width: 100%;
-  .btn{
-    width: 40%;
-
+  .login{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  .registerbtn{
+    background-color: rgba(0, 0, 0, 0.541);
   }
 }
 
@@ -52,11 +57,42 @@
 
 input.form-control{
   border: none;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #a8a8a8;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .mulo-ui-home-head{
   .logo{
     font-size: 50px
   }
+}
+.title{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.components-menus{
+  width: 100px;
+  
+}
+
+.components-body{
+  width: 1200px;
+  margin:auto;
+}
+
+// 布局
+.row{
+
+}
+
+//24col布局
+@for $i from 1 through 24 {
+  .col-#{$i} { width:4.1666% * $i; }
+}
+
+.router-link-active{
+  color: red;
 }

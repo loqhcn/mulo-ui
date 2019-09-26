@@ -3,11 +3,12 @@
     <div class="components-doc flex ">
       <!-- 组件列表 -->
       <ul class="components-menus flex column col-6">
+        
+
         <li @click="appRoute.go('/index/components/radios')">radios选择</li>
 
         <li @click="appRoute.go('/index/components/button')">按钮</li>
 
-        <li @click="appRoute.go('/index/components/layer')">弹出层</li>
 
         <li @click="appRoute.go('/index/components/message-box')">提示消息</li>
       </ul>

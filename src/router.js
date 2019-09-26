@@ -27,15 +27,37 @@ export default new Router({
           name: 'main',
           component: () => import('./views/main/main.vue'),
         },
+
+        //移动端组件
         {
           path: 'components',
           component: () => import('./views/components/components.vue'),
           //组件文档
           children:[
-            { path: 'radios', component: () => import('./views/radios.vue') },
-    
+            { path: '', component: () => import('./views/components/start.vue') },
+
+            { path: 'radios', component: () => import('./views/components/doc/radios.vue') },
+            { path: 'button', component: () => import('./views/components/doc/button.vue') },
+            { path: 'message-box', component: () => import('./views/components/doc/message-box.vue') },
+           
           ]
         },
+        //web组件
+        {
+          path: 'components-web',
+          component: () => import('./views/components-web/components-web.vue'),
+          //组件文档
+          children:[
+            { path: '', component: () => import('./views/components-web/start.vue') },
+
+            { path: 'radios', component: () => import('./views/components-web/doc/radios.vue') },
+            { path: 'button', component: () => import('./views/components-web/doc/button.vue') },
+            { path: 'message-box', component: () => import('./views/components-web/doc/message-box.vue') },
+           
+          ]
+        },
+
+
         {
           path: 'tutorial',
           name: 'tutorial',
