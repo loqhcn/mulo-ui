@@ -1,8 +1,38 @@
 <template>
-  <div class="home">
-    <H1>Mulo-Ui</H1>
-    <h4>一个开源的长期长期累积使用的ui组件库</h4>
-    <button @click="appRoute.go('/index/main')">进入</button>
+  <div class="mulo-ui-home">
+    <div class="mulo-ui-home-head flex space-between">
+      <div class="logo">木有logo</div>
+    </div>
+    <div class="mulo-ui-desc">
+      <H1>Mulo Ui</H1>
+      <h4>一个基于Vue的开源Ui组件库~</h4>
+      <button class="btn enterbtn" @click="appRoute.go('/index/main')">进入</button>
+    </div>
+    <!-- 应用列表 -->
+    <div></div>
+    <div class="mulo-ui-apps ">
+      <div class="title">更多</div>
+      <div class="myapps flex wrap">
+        <a href="http://www.loqh.cn" target="guanwang">
+          <div class="ui-app flex center center-line">官网</div>
+        </a>
+        <a href="http://blog.loqh.cn" target="guanwang">
+          <div class="ui-app flex center center-line">博客</div>
+        </a>
+        <a href="http://www.loqh.cn/apps" target="guanwang">
+          <div class="ui-app flex center center-line">个人应用</div>
+        </a>
+         <a href="http://www.loqh.cn" target="guanwang">
+          <div class="ui-app flex center center-line">SamsBuild</div>
+        </a>
+        <a href="http://framework.loqh.cn" target="guanwang">
+          <div class="ui-app flex center center-line">开发架构</div>
+        </a>
+        <a href="https://www.kancloud.cn/loqhcn/mulo_code/1242892" target="guanwang">
+          <div class="ui-app flex center center-line">文档中心</div>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,3 +47,30 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.mulo-ui-home {
+}
+.enterbtn {
+  width: 200px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.mulo-ui-desc {
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+}
+.mulo-ui-apps {
+  width: 500px;
+  border: 1px solid #fa4a80;
+  margin: auto;
+  margin-top: 40px;
+  .ui-app {
+    width: 100px;
+    height: 50px;
+  }
+  .myapps{
+    width: 100%;
+  }
+}
+</style>

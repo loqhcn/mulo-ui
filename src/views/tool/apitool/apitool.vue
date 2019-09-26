@@ -3,7 +3,7 @@
     <div class="title">api测试工具</div>
     <div class="desc-text">提供api的测试体系工具</div>
     
- 
+    
 
    
   </div>
@@ -22,12 +22,15 @@ export default {
     };
   },
   created() {
-      if(localStorage.auth_token){
-          this.showLogin = true;
+      if(!localStorage.auth_token){
+         this.$auth.relogin();
       }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+
+
+
 </style>

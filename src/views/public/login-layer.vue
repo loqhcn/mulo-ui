@@ -11,10 +11,13 @@
         <label for>密码</label>
         <input type="text" />
       </div>
-      <button @click="login()">登录</button>
-      <button @click="register()">注册</button>
+      <div class="login-btns flex space-between">
+  <button class="btn" @click="login()">登录</button>
+      <button  class="btn" @click="register()">注册</button>
+      </div>
+    
 
-      <button class="closebtn" style="margin-top:10px;" @click="close()">关闭</button>
+      <button  class="closebtn" style="margin-top:10px;" @click="close()">关闭</button>
       
     </div>
   </div>
@@ -33,7 +36,9 @@ export default {
   methods: {
     login() {},
     //注册
-    register() {},
+    register() {
+      this.appRoute.go('/user/register')
+    },
     close() {
       this.$emit("close", 1);
     }

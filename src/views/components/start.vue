@@ -1,6 +1,10 @@
 <template>
-    <div class="loginbox">
-        
+    <div>
+        <div class="title">安装</div>
+        <code>
+            npm i mulo-ui -S
+        </code>
+
     </div>
 </template>
 
@@ -11,7 +15,5 @@
 </script>
 
 <style lang="scss" scoped>
-.registerbox{
-    
-}
+
 </style>

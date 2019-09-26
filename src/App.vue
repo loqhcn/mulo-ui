@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import loginLayer from "@/components/auth/login-layer.vue";
+import loginLayer from "@/views/public/login-layer.vue";
 export default {
   components: {
     "login-layer": loginLayer

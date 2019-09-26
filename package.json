@@ -18,7 +18,9 @@
     "lint": "vue-cli-service lint",
     "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mulo-validate": "^1.0.0"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",

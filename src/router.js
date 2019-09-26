@@ -29,8 +29,12 @@ export default new Router({
         },
         {
           path: 'components',
-          name: 'components',
           component: () => import('./views/components/components.vue'),
+          //组件文档
+          children:[
+            { path: 'radios', component: () => import('./views/radios.vue') },
+    
+          ]
         },
         {
           path: 'tutorial',
@@ -52,5 +56,10 @@ export default new Router({
     
     { path: '/plan_tool', component: () => import('./views/tool/plan/plan.vue') },
     { path: '/apitool', component: () => import('./views/tool/apitool/apitool.vue') },
+  
+    
+    //用户
+    { path: '/user/register', component: () => import('./views/user/register.vue') },
+  
   ]
 })
