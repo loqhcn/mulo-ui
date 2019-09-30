@@ -21,7 +21,7 @@ export default new Router({
       path: '/index',
       name: 'index',
       component: MainLayout,
-      children:[
+      children: [
         {
           path: 'main',
           name: 'main',
@@ -33,13 +33,13 @@ export default new Router({
           path: 'components',
           component: () => import('./views/components/components.vue'),
           //组件文档
-          children:[
+          children: [
             { path: '', component: () => import('./views/components/start.vue') },
 
             { path: 'radios', component: () => import('./views/components/doc/radios.vue') },
             { path: 'button', component: () => import('./views/components/doc/button.vue') },
             { path: 'message-box', component: () => import('./views/components/doc/message-box.vue') },
-           
+
           ]
         },
         //web组件
@@ -47,13 +47,13 @@ export default new Router({
           path: 'components-web',
           component: () => import('./views/components-web/components-web.vue'),
           //组件文档
-          children:[
+          children: [
             { path: '', component: () => import('./views/components-web/start.vue') },
 
             { path: 'radios', component: () => import('./views/components-web/doc/radios.vue') },
             { path: 'button', component: () => import('./views/components-web/doc/button.vue') },
             { path: 'message-box', component: () => import('./views/components-web/doc/message-box.vue') },
-           
+
           ]
         },
 
@@ -70,18 +70,31 @@ export default new Router({
         },
       ]
     },
-    
+
     // { path: '/about', component: () => import('./views/About.vue') },
-   
+
 
     { path: '/radios', component: () => import('./views/radios.vue') },
-    
+
     { path: '/plan_tool', component: () => import('./views/tool/plan/plan.vue') },
-    { path: '/apitool', component: () => import('./views/tool/apitool/apitool.vue') },
-  
-    
-    //用户
-    { path: '/user/register', component: () => import('./views/user/register.vue') },
+
+    {
+      path: '/apitool',
+      component: () => import('./views/tool/apitool/apitool.vue'),
+      children: [
+        { path: '', component: () => import('./views/tool/apitool/projects.vue'), },
+        { path: 'projects_create', component: () => import('./views/tool/apitool/projects-create.vue'), },
+        { path: 'projects_detail', component: () => import('./views/tool/apitool/projects-detail.vue'), }
+      ],
+    },
+   
+
+
+
+
+
+  //用户
+  { path: '/user/register', component: () => import('./views/user/register.vue') },
   
   ]
 })

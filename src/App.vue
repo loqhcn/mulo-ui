@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       //wap网页版登录弹出层
-      showLogin: true,
+      showLogin: false,
 
       //用于登录后的组件重渲染
       isRouterShow: true

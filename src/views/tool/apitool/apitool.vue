@@ -4,14 +4,18 @@
     <div class="title">api测试工具</div>
     <div class="desc-text">提供api的测试体系工具</div>
     
-    
+     <router-view></router-view>
 
    
   </div>
 </template>
 
 <script>
+import projects from './projects.vue'
 export default {
+  components: {
+    projects,
+  },
   data() {
     return {
         //登录控制

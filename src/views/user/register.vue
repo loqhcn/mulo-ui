@@ -9,14 +9,19 @@
         </div>
         <div class="bindphone flex column center-line">
           <input
-            class="code-input phone"
+            class="input-row-reg code-input phone"
             v-model="phone"
-            @input="inputPhone"
-            type="number"
+            type="text"
             placeholder="请输入邮箱"
           />
+            <input
+            class="input-row-reg code-input password"
+            v-model="password"
+            type="password"
+            placeholder="密码"
+          />
 
-          <div class="inputcode flex space-between">
+          <div class="input-row-reg inputcode flex space-between center-line">
             <input
               class="code-input code"
               v-model="code"
@@ -57,8 +62,9 @@ export default {
   data() {
     return {
       //输入
-      phone: "",
+      phone: "0@loqh.cn",
       code: "",
+      password:'123456',
       //倒计时
       daojishi: 0,
       daojishiMax: 60,
@@ -85,12 +91,13 @@ export default {
       this.code = this.code.substr(0, 6);
     },
     submit() {
-      if (!validate.mobile(this.phone)) {
-        this.$toast("手机号不正确");
-        return;
-      }
+     
       if (!this.code) {
         this.$toast("请输入验证码");
+        return;
+      }
+      if (!/^[^(\r\n)]{6,18}$/.test(this.password)) {
+        this.$toast("密码为6-18位");
         return;
       }
       if (!/^[0-9]{4,6}$/.test(this.code)) {
@@ -101,22 +108,23 @@ export default {
         return;
       }
       this.lockSubmit = true;
-      this.$http
-        .post("/login/mobile", {
-          mobile: this.phone,
+      this.$http_user
+        .post("/api/register/registerByEmail", {
+          email: this.phone,
+          pass:this.password,
           code: this.code
         })
         .then(res => {
           this.lockSubmit = false;
-          if (res.code != 200) {
+          if (res.errno) {
             this.$toast(res.msg);
             return;
           }
-          //登录令牌
-          localStorage.setItem("auth_token", res.token);
-
-          this.$auth.afterLogin();
-          this.$toast("登录成功");
+     
+          // this.$auth.afterLogin();
+          alert('注册成功')
+          this.$auth.relogin();
+          this.appRoute.back();
         });
     },
     /**
@@ -143,10 +151,10 @@ export default {
       }, 1000);
 
       //发送验证
-      this.$http
-        .post("/sms/code", { mobile: this.phone })
+      this.$http_user
+        .post("/api/email/verifyCode", { email: this.phone,type_use:'register' })
         .then(res => {
-          if (res.code != 200) {
+          if (res.errno) {
             clearInterval(daojishiRun);
             this.daojishi = 0;
             this.$toast(res.msg);
@@ -194,9 +202,12 @@ export default {
   padding-left: 0.83rem;
   border-radius: 0.3rem;
   font-size: 0.75rem;
-
   font-weight: 400;
   box-sizing: border-box;
+  
+}
+.input-row-reg{
+  margin-top: 1rem;
 }
 
 //验证阿输入
@@ -258,7 +269,7 @@ export default {
   margin-top: 1.83rem;
 }
 .inputcode {
-  margin-top: 0.7rem;
+
   position: relative;
 }
 
@@ -274,7 +285,7 @@ export default {
   color: rgba(49, 49, 49, 0.2);
 }
 .nextbtn.active {
-  background: rgba(90, 54, 68, 1);
+  background: #fa4a85;
   font-size: 0.85rem;
   font-family: PingFang SC;
   font-weight: 500;
