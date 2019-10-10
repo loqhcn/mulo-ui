@@ -11,6 +11,8 @@ import './assets/style/app.scss'
 
 import muloui from './../packpage/vue/index'
 Vue.use(muloui);
+import toast from '../packpage/vuepc/toast'
+Vue.use(toast);
 
 //## 路由封装函数
 import appRoute from './lib/AppRoute'
@@ -40,9 +42,7 @@ Vue.prototype.$auth = new Auth();
 import headlink from "@/views/public/head-link";
 Vue.component('head-link', headlink)
 
-Vue.prototype.$toast = (msg) => {
-  console.log(msg);
-}
+
 
 new Vue({
   router,
