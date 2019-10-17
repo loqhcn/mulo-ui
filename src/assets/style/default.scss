@@ -1,11 +1,6 @@
 
-
-
-
-/*flex布局*/
-@import "layout-flex.scss";
-
 // 基础设置
+html{font-size: 16px;}
 * { -webkit-box-sizing: border-box; box-sizing: border-box; /*-webkit-user-select: none; outline: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; */}
 html,body{ height: 100%; background: #f6f6f6;  font-family: PingFangSC-Regular,Helvetica,Droid Sans,Arial,sans-serif;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, span, input, p, a { margin: 0; padding: 0; }
@@ -37,11 +32,11 @@ em { font-style: normal; }
 .display-none{ display: none !important;}
 .display-inlineblock{ display: inline-block !important;}
 
-//浮动
-.fl{ float:left !important;}
-.fr{ float:right !important;}
-.clear { clear: both; font-size: 0; height: 0; line-height: 0; }
-.outer_clear { zoom: 1; }    /*==for IE6/7 Maxthon2==*/
-.outer_clear:after { clear: both; content: '.'; display: block; width: 0; height: 0; visibility: hidden; font-size: 0; }   /*==for FF/chrome/opera/IE8==*/
 
 
+/*flex布局*/
+@import "layout-flex.scss";
+/*基础布局*/
+@import "layout.scss";
+
+@import "button.scss";

@@ -19,6 +19,7 @@
     "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
   "dependencies": {
+    "highlight.js": "^9.15.10",
     "mulo-validate": "^1.0.0"
   },
   "devDependencies": {

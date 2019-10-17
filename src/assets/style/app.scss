@@ -28,9 +28,7 @@
   padding: 20px;
   border-radius: 5px;
 }
-.closebtn{
-    
-}
+
 .login-btns{
   margin-top: 10px;
   width: 100%;
@@ -83,15 +81,7 @@ input.form-control{
   margin:auto;
 }
 
-// 布局
-.row{
 
-}
-
-//24col布局
-@for $i from 1 through 24 {
-  .col-#{$i} { width:4.1666% * $i; }
-}
 
 .router-link-active{
   color: red;

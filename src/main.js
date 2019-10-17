@@ -18,6 +18,10 @@ Vue.use(toast);
 import appRoute from './lib/AppRoute'
 Vue.prototype.appRoute = appRoute
 
+// # 语法高亮-示例代码
+// highlight.js代码高亮插件
+import Highlight from './lib/highlight'; // from 路径是highlight.js的路径，纯属自定义
+Vue.use(Highlight);
 //
 import axios from 'axios'
 Vue.prototype.$axios = axios;

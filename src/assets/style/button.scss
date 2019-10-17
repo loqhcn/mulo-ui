@@ -1,0 +1,21 @@
+//郁金香配色
+
+
+//粉色花瓣
+$color-pink: #cc5f7c;
+//花梗
+$color-green: #20360c;
+
+.btn{
+  border: 0px;
+  background-color: $color-pink;
+  box-sizing: border-box;
+  padding: 2px 10px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: .2rem;
+}
+
+.btn.green{
+    background-color: $color-green;
+}

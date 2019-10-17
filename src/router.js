@@ -53,6 +53,7 @@ export default new Router({
             { path: 'radios', component: () => import('./views/components-web/doc/radios.vue') },
             { path: 'button', component: () => import('./views/components-web/doc/button.vue') },
             { path: 'message-box', component: () => import('./views/components-web/doc/message-box.vue') },
+            { path: 'demodoc', component: () => import('./views/components-web/demodoc.vue') },
 
           ]
         },
@@ -68,6 +69,7 @@ export default new Router({
           name: 'tool',
           component: () => import('./views/tool/tool.vue'),
         },
+        { path: 'admin', component: () => import('./views/admin/admin.vue') },
       ]
     },
 
@@ -83,8 +85,11 @@ export default new Router({
       component: () => import('./views/tool/apitool/apitool.vue'),
       children: [
         { path: '', component: () => import('./views/tool/apitool/projects.vue'), },
+        
         { path: 'projects_create', component: () => import('./views/tool/apitool/projects-create.vue'), },
-        { path: 'projects_detail', component: () => import('./views/tool/apitool/projects-detail.vue'), }
+        { path: 'projects_detail', component: () => import('./views/tool/apitool/projects-detail.vue'), },
+
+
       ],
     },
    
@@ -95,6 +100,17 @@ export default new Router({
 
   //用户
   { path: '/user/register', component: () => import('./views/user/register.vue') },
+
+
+  // # begin 后台模板
+
+  { path: '/admin/login/login', component: () => import('./views/admin/login/login.vue') },
+
+
+  // # end 后台模板
+
+
   
   ]
+
 })

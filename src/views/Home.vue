@@ -1,7 +1,9 @@
 <template>
   <div class="mulo-ui-home">
     <div class="mulo-ui-home-head flex space-between">
-      <div class="logo">木有logo</div>
+      <div class="logo">
+        <img src="./../assets/logo.png" alt srcset />
+      </div>
     </div>
     <div class="mulo-ui-desc">
       <H1>Mulo Ui</H1>
@@ -10,11 +12,14 @@
     </div>
     <!-- 应用列表 -->
     <div></div>
-    <div class="mulo-ui-apps ">
+    <div class="mulo-ui-apps">
       <div class="title">更多</div>
       <div class="myapps flex wrap">
         <a href="http://www.loqh.cn" target="guanwang">
           <div class="ui-app flex center center-line">官网</div>
+        </a>
+        <a href="http://template.loqh.cn" target="guanwang">
+          <div class="ui-app flex center center-line">网页模板</div>
         </a>
         <a href="http://blog.loqh.cn" target="guanwang">
           <div class="ui-app flex center center-line">博客</div>
@@ -22,7 +27,7 @@
         <a href="http://www.loqh.cn/apps" target="guanwang">
           <div class="ui-app flex center center-line">个人应用</div>
         </a>
-         <a href="http://www.loqh.cn" target="guanwang">
+        <a href="http://www.loqh.cn" target="guanwang">
           <div class="ui-app flex center center-line">SamsBuild</div>
         </a>
         <a href="http://framework.loqh.cn" target="guanwang">
@@ -62,14 +67,20 @@ export default {
 }
 .mulo-ui-apps {
   width: 500px;
-  border: 1px solid #fa4a80;
+
   margin: auto;
   margin-top: 40px;
+  background-color: #fff;
+  box-shadow: 4px 4px 1px 1px #d9d9d9;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;  
+
   .ui-app {
     width: 100px;
     height: 50px;
   }
-  .myapps{
+  .myapps {
     width: 100%;
   }
 }
