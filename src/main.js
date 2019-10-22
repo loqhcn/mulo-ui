@@ -46,7 +46,11 @@ Vue.prototype.$auth = new Auth();
 import headlink from "@/views/public/head-link";
 Vue.component('head-link', headlink)
 
+//文档功能内嵌组件
+import DemoBlock from './docs/demo-block'
+Vue.component('demo-block',DemoBlock)
 
+import 'highlight.js/styles/color-brewer.css';
 
 new Vue({
   router,
