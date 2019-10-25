@@ -1,6 +1,6 @@
 const Config = require('markdown-it-chain');
 const anchorPlugin = require('markdown-it-anchor');
-// const slugify = require('transliteration').slugify;
+const slugify = require('transliteration').slugify;
 const containers = require('./containers');
 const overWriteFenceRule = require('./fence');
 
@@ -12,9 +12,9 @@ config
   .plugin('anchor').use(anchorPlugin, [
     {
       level: 2,
-      // slugify: slugify,
-      // permalink: true,
-      // permalinkBefore: true
+      slugify: slugify,
+      permalink: true,
+      permalinkBefore: true
     }
   ]).end()
   .plugin('containers').use(containers).end();

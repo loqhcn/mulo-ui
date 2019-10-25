@@ -1,11 +1,13 @@
 <template>
   <div>
-    <span>代码演示模板</span>
+   
     <!-- 展示组件内容 -->
-    <slot name="source"></slot>
+    <div class="sources">
+        <slot name="source"></slot>
+    </div>
     <slot></slot>
     <!-- 展示组件源码 -->
-    <div class="highlight">
+    <div v-highlight class="highlight">
       <slot name="highlight"></slot>
     </div>
   </div>
@@ -20,4 +22,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 </style>

@@ -1,9 +1,19 @@
 ## 按钮组件
+```javascript
+import button from 'mulo-ui/packpage/vuepc/button'
+Vue.use(button)
+```
 
+:::demo 按钮组件
 
-:::warning
-请注意大小写
+```html
+ <o-button>按钮</o-button>
+ <o-button type="denger"></o-button>
+ <o-button type="info"></o-button>
+```
 :::
+
+### xxx
 
 | 格式        | 含义             | 备注                                             | 举例          |  |
 |-------------|------------------|--------------------------------------------------|---------------|--|
@@ -26,25 +36,3 @@
 | `a`         | am/pm            | 仅 `format` 可用，小写                           | am            |  |
 | `timestamp` | JS时间戳         | 仅 `value-format` 可用；组件绑定值为`number`类型 | 1483326245000 |  |
 | `[MM]`      | 不需要格式化字符 | 使用方括号标识不需要格式化的字符 (如  [A] [MM])  | MM            |  |
-
-:::demo 基本单位
-```html
-<template>
-  <div >
-    <div>嘻嘻嘻</div>
-    {{value1}}{{value2}}
-  </div>
-</template>
-
-<script>
-  export default {
-    data() {
-      return {
-        value1: 'value1',
-        value2: 'value2',
-      };
-    }
-  };
-</script>
-```
-:::

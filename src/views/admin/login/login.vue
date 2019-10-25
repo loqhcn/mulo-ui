@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="login-input-row">
-                       <button class="btn">登录</button>
+                       <o-button>登录</o-button>
                     </div>
                 </div>
         </div>

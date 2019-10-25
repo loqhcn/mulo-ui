@@ -8,11 +8,17 @@ Vue.config.productionTip = false
 //使用本地组件
 import './assets/style/default.scss'
 import './assets/style/app.scss'
+import '../style/layout-flex.scss';
+
 
 import muloui from './../packpage/vue/index'
 Vue.use(muloui);
 import toast from '../packpage/vuepc/toast'
 Vue.use(toast);
+
+// 引入整个ui组件库
+import MuloUiPc from '../packpage/vuepc'
+Vue.use(MuloUiPc);
 
 //## 路由封装函数
 import appRoute from './lib/AppRoute'
@@ -22,6 +28,7 @@ Vue.prototype.appRoute = appRoute
 // highlight.js代码高亮插件
 import Highlight from './lib/highlight'; // from 路径是highlight.js的路径，纯属自定义
 Vue.use(Highlight);
+
 //
 import axios from 'axios'
 Vue.prototype.$axios = axios;
@@ -51,6 +58,16 @@ import DemoBlock from './docs/demo-block'
 Vue.component('demo-block',DemoBlock)
 
 import 'highlight.js/styles/color-brewer.css';
+
+//TODO 代码高亮  在路由渲染后执行的
+import hljs from 'highlight.js';
+router.afterEach(route => {
+  // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
+  Vue.nextTick(() => {
+    const blocks = document.querySelectorAll('pre code:not(.hljs)');
+    Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+  });
+});
 
 new Vue({
   router,

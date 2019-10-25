@@ -1,5 +1,6 @@
 
-import nowComponent from './button.vue';
+import nowComponent from './icon.vue';
+
 
 //安装脚本
 nowComponent.install = function (Vue) {

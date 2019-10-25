@@ -1,42 +1,46 @@
 <template>
-  <div class="">
+  <div class>
     <div class="components-doc flex">
       <!-- 组件列表 -->
       <div class="components-menus flex column" :style="{top:`${headerHeight}px`}">
         <div class="cm-row cm-row-title">基础组件</div>
+        <router-link v-for="(li,index) in menus" :key="index" :to="`/index/components-web/${li.path}`" class="cm-row">{{li.name}}</router-link>
+        <!-- <div class="cm-row cm-row-title">基础组件</div>
         <router-link to="/index/components-web/demodoc" class="cm-row">演示文档</router-link>
 
         <router-link to="/index/components-web/radios" class="cm-row">radios选择</router-link>
         <router-link to="/index/components-web/button" class="cm-row">按钮</router-link>
-        <router-link to="/index/components-web/layer" class="cm-row">弹出层</router-link>
+        <router-link to="/index/components-web/icon" class="cm-row">icon</router-link>
         <router-link to="/index/components-web/message-box" class="cm-row">提示消息</router-link>
 
         <div class="cm-row cm-row-title">弹出层组件</div>
         <router-link to="/index/components-web/radios" class="cm-row">radios选择</router-link>
         <router-link to="/index/components-web/button" class="cm-row">按钮</router-link>
         <router-link to="/index/components-web/layer" class="cm-row">弹出层</router-link>
-        <router-link to="/index/components-web/message-box" class="cm-row">提示消息</router-link>
-        
+        <router-link to="/index/components-web/message-box" class="cm-row">提示消息</router-link> -->
       </div>
 
-      <div class="doc-detail col-16">
-    
-        <router-view :style="{'margin-left':`${menuWidth}px`,'margin-top':`${headerHeight}px`}"></router-view>
+      <div class="doc-detail">
+        <router-view :style="{'margin-left':`${menuWidth}px`}"></router-view>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import pageRule from './../../nav_web.config'
 export default {
   mounted() {
     this.headerHeight = document.querySelector(".mulo-ui-header").offsetHeight;
-    this.menuWidth = document.querySelector('.components-menus').offsetWidth
+    this.menuWidth = document.querySelector(".components-menus").offsetWidth;
+
+    console.log(this.menus)
   },
   data() {
     return {
       headerHeight: 0,
-      menuWidth:0,
+      menuWidth: 0,
+      menus:pageRule['zh-cn']
     };
   }
 };
@@ -68,7 +72,6 @@ export default {
   font-size: 1rem;
 }
 .components-body {
-
   margin-top: 1rem;
   flex: 1;
 }

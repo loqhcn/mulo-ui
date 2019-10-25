@@ -8,7 +8,7 @@
     <div class="mulo-ui-desc">
       <H1>Mulo Ui</H1>
       <h4>一个基于Vue的开源Ui组件库~</h4>
-      <button class="btn enterbtn" @click="appRoute.go('/index/main')">进入</button>
+      <o-button style="width:10rem" @click="appRoute.go('/index/main')">进入</o-button>
     </div>
     <!-- 应用列表 -->
     <div></div>

@@ -6,9 +6,26 @@ import MainLayout from './views/layout/main'
 
 Vue.use(Router)
 
-import '../style/layout-flex.scss';
 
 //引入文档
+
+import navWeb from './nav_web.config.js'
+var webComponentRoute = [];
+
+webComponentRoute = loadMap(navWeb['zh-cn'],'zh-cn');
+console.log(navWeb,webComponentRoute)
+
+//加载路由文档路由列表
+function loadMap(routesSet,lang){
+  var routes =[];
+  routesSet.forEach(p => {
+    routes.push({
+      path: p.path,
+      component: () => import(`./docs/${lang}/web/${p.path}.md`),
+    })
+  });
+  return routes;
+}
 
 export default new Router({
   routes: [
@@ -17,9 +34,7 @@ export default new Router({
       name: 'home',
       component: Home
     },
-    // 加载文档
-    { path: '/doc', component: () => import('./docs/button.md') },
-
+    
 
     //组件列表
     {
@@ -56,10 +71,12 @@ export default new Router({
             { path: '', component: () => import('./views/components-web/start.vue') },
 
             { path: 'radios', component: () => import('./views/components-web/doc/radios.vue') },
-            { path: 'button', component:  () => import('./docs/button.md') },
+
+            
+
             { path: 'message-box', component: () => import('./views/components-web/doc/message-box.vue') },
             { path: 'demodoc', component: () => import('./views/components-web/demodoc.vue') },
-
+            ...webComponentRoute
           ]
         },
 

@@ -1,40 +1,83 @@
 <template>
-  <div class="mulo-btn-pc" :class="[
-      type ? 'mulo-button--' + type : '',
-      ]" >
-      <slot></slot>
-  </div>
+  <button
+    class="btn"
+    @click="handleClick"
+    :disabled="buttonDisabled || loading"
+    :autofocus="autofocus"
+    :type="nativeType"
+    :class="[
+      type ?  type : '',
+      buttonSize ? 'mulo-button--' + buttonSize : '',
+      {
+        'is-disabled': buttonDisabled,
+        'is-loading': loading,
+        'is-plain': plain,
+        'is-round': round,
+        'is-circle': circle
+      }
+    ]"
+  >
+    <i class="el-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
+    <span>
+      <slot>按钮</slot>
+    </span>
+  </button>
 </template>
-
 <script>
 export default {
   name: "o-button",
-  props: {
-      type: {
-        type: String,
-        default: 'default'
-      },
+  inject: {
+    elForm: {
+      default: ""
+    },
+    elFormItem: {
+      default: ""
+    }
   },
+
+  props: {
+    type: {
+      type: String,
+      default: "default"
+    },
+    size: String,
+    icon: {
+      type: String,
+      default: ""
+    },
+    nativeType: {
+      type: String,
+      default: "button"
+    },
+    loading: Boolean,
+    disabled: Boolean,
+    plain: Boolean,
+    autofocus: Boolean,
+    round: Boolean,
+    circle: Boolean
+  },
+
+  computed: {
+    _elFormItemSize() {
+      return (this.elFormItem || {}).elFormItemSize;
+    },
+    buttonSize() {
+      return this.size || this._elFormItemSize || (this.$ELEMENT || {}).size;
+    },
+    buttonDisabled() {
+      return this.disabled || (this.elForm || {}).disabled;
+    }
+  },
+
+  methods: {
+    handleClick(evt) {
+      this.$emit("click", evt);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-.mulo-btn-pc {
-  border: 0px;
-  background-color: #fa4a80;
-  box-sizing: border-box;
-  padding: 2px 10px;
-  font-size: 12px;
-  color: white;
-  border-radius: 5px;
-}
-.mulo-button--default{
-    background-color: #fa4a80;
-}
-.mulo-button--denger{
-    background-color: #f56c6c;
-}
-.mulo-button--info{
-    background-color: #fa4a80;
-}
+
 </style>

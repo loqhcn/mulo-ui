@@ -22,7 +22,7 @@
       <li>
         <router-link class="routelink" to="/index/admin">后台模板</router-link>
       </li>
-      <li>菜单
+      <li>
         <a href="https://github.com/loqhcn/mulo-ui" class="routelink" target="nextwindow">
           <svg
             class="octicon octicon-mark-github v-align-middle"
