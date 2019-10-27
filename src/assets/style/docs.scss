@@ -1,35 +1,34 @@
 // mulo-ui的markdown文档样式
 
 // 文档主题
-.mulo-ui-docs{
-    table{
-        width: 100%;
-        padding: 1rem;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 4px 3px 1px 1px #d2d2d2;
-    }
-    thead{
-        font-size: 1.2rem;
-        th{
-            text-align: left;
-        }
-       
-    }
-}
-.sources{
+.mulo-ui-docs {
+  table {
     width: 100%;
-    min-height: 1rem;
-    border:1px solid #d6d6d6;
+    padding: 1rem;
     background-color: white;
     border-radius: 5px;
-    padding: 1rem;
+    box-shadow: 4px 3px 1px 1px #d2d2d2;
   }
-  .mulo-ui-docs>*{
-      margin: .5rem 0;
+  thead {
+    font-size: 1.2rem;
+    th {
+      text-align: left;
+    }
   }
-  
-  //前面的图标
-  .header-anchor{
-      display: none;
-  }
+}
+.sources {
+  width: 100%;
+  min-height: 1rem;
+  border: 1px solid #d6d6d6;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.mulo-ui-docs > * {
+  margin: 0.5rem 0;
+}
+
+//前面的图标
+.header-anchor {
+  display: none;
+}

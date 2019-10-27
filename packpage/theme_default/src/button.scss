@@ -1,0 +1,54 @@
+//郁金香配色
+
+//粉色花瓣
+$color-pink: #cc5f7c;
+//花梗
+$color-green: #20360c;
+
+.btn {
+  border: 0px;
+  background-color: $color-pink;
+  box-sizing: border-box;
+  padding: 0.3rem 0.9rem;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 0.2rem;
+}
+.btn.default {
+  background-color: blueviolet;
+}
+.btn.denger {
+  background-color: blueviolet;
+}
+.btn.info {
+  background-color: blueviolet;
+}
+.btn.plain{
+
+}
+.btn.primary {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+//禁用按钮
+.btn.is-disabled {
+  color: #c0c4cc;
+  cursor: not-allowed;
+  background-image: none;
+  background-color: #fff;
+  border-color: #ebeef5;
+}
+.btn.is-round {
+  border-radius: 1rem;
+  padding: 0.3rem 0.9rem;
+}
+
+.btn.green {
+  background-color: $color-green;
+}
+
+
+.button-group .btn{
+  
+}

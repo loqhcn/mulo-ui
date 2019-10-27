@@ -16,7 +16,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
+    "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js",
+    
+    "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
   "dependencies": {
     "highlight.js": "^9.15.10",
