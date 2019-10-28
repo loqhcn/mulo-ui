@@ -3,23 +3,12 @@
     <div class="components-doc flex">
       <!-- 组件列表 -->
       <div class="components-menus flex column" :style="{top:`${headerHeight}px`}">
-        <div class="cm-row cm-row-title">基础组件</div>
-        <router-link v-for="(li,index) in menus" :key="index" :to="`/index/components-web/${li.path}`" class="cm-row">{{li.name}}</router-link>
-        <!-- <div class="cm-row cm-row-title">基础组件</div>
-        <router-link to="/index/components-web/demodoc" class="cm-row">演示文档</router-link>
-
-        <router-link to="/index/components-web/radios" class="cm-row">radios选择</router-link>
-        <router-link to="/index/components-web/button" class="cm-row">按钮</router-link>
-        <router-link to="/index/components-web/icon" class="cm-row">icon</router-link>
-        <router-link to="/index/components-web/message-box" class="cm-row">提示消息</router-link>
-
-        <div class="cm-row cm-row-title">弹出层组件</div>
-        <router-link to="/index/components-web/radios" class="cm-row">radios选择</router-link>
-        <router-link to="/index/components-web/button" class="cm-row">按钮</router-link>
-        <router-link to="/index/components-web/layer" class="cm-row">弹出层</router-link>
-        <router-link to="/index/components-web/message-box" class="cm-row">提示消息</router-link> -->
+        
+        <template v-for="(groupInfo,index_group) in menus" >
+          <div :key="index_group+'group'" class="cm-row cm-row-title">{{groupInfo.title}}</div>
+          <router-link v-for="(li,index) in groupInfo.menus" :key="index+'_'+index_group" :to="`/index/components-web/${li.path}`" class="cm-row">{{li.name}}</router-link>
+        </template>
       </div>
-
       <div class="doc-detail">
         <router-view :style="{'margin-left':`${menuWidth}px`}"></router-view>
       </div>
@@ -31,6 +20,7 @@
 import pageRule from './../../nav_web.config'
 export default {
   mounted() {
+    //文档的位置
     this.headerHeight = document.querySelector(".mulo-ui-header").offsetHeight;
     this.menuWidth = document.querySelector(".components-menus").offsetWidth;
 

@@ -1,31 +1,26 @@
-//郁金香配色
+@import "./common/var.scss";
 
-//粉色花瓣
-$color-pink: #cc5f7c;
-//花梗
-$color-green: #20360c;
+//郁金香配色
 
 .btn {
   border: 0px;
   background-color: $color-pink;
   box-sizing: border-box;
   padding: 0.3rem 0.9rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
   border-radius: 0.2rem;
 }
 .btn.default {
-  background-color: blueviolet;
+  background-color: $btn-default;
 }
 .btn.denger {
-  background-color: blueviolet;
+  background-color: $btn-default;
 }
 .btn.info {
-  background-color: blueviolet;
+  background-color: $btn-default;
 }
-.btn.plain{
 
-}
 .btn.primary {
   color: #fff;
   background-color: #409eff;
@@ -43,12 +38,7 @@ $color-green: #20360c;
   border-radius: 1rem;
   padding: 0.3rem 0.9rem;
 }
-
 .btn.green {
   background-color: $color-green;
 }
 
-
-.button-group .btn{
-  
-}

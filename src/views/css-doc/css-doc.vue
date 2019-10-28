@@ -6,7 +6,7 @@
         
         <template v-for="(groupInfo,index_group) in menus" >
           <div :key="index_group+'group'" class="cm-row cm-row-title">{{groupInfo.title}}</div>
-          <router-link v-for="(li,index) in groupInfo.menus" :key="index+'_'+index_group" :to="`/index/components/${li.path}`" class="cm-row">{{li.name}}</router-link>
+          <router-link v-for="(li,index) in groupInfo.menus" :key="index+'_'+index_group" :to="`/index/css-doc/${li.path}`" class="cm-row">{{li.name}}</router-link>
         </template>
       </div>
       <div class="doc-detail">
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import pageRule from './../../nav_mobile.config'
+import pageRule from './../../nav_css.config'
 export default {
   mounted() {
     //文档的位置

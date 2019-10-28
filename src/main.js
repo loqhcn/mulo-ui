@@ -5,11 +5,12 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-//使用本地组件
-import './assets/style/default.scss'
-import './assets/style/app.scss'
-import '../style/layout-flex.scss';
 
+//mulo-ui样式
+import './../packpage/theme_default/src/index.scss'
+
+//应用内样式
+import './assets/style/app.scss'
 
 import muloui from './../packpage/vue/index'
 Vue.use(muloui);

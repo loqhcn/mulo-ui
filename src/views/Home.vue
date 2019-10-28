@@ -15,6 +15,9 @@
     <div class="mulo-ui-apps">
       <div class="title">更多</div>
       <div class="myapps flex wrap">
+        <a href="https://www.kancloud.cn/loqhcn/mulo_code/1242892" target="guanwang">
+          <div class="ui-app flex center center-line">文档中心</div>
+        </a>
         <a href="http://www.loqh.cn" target="guanwang">
           <div class="ui-app flex center center-line">官网</div>
         </a>
@@ -32,9 +35,6 @@
         </a>
         <a href="http://framework.loqh.cn" target="guanwang">
           <div class="ui-app flex center center-line">开发架构</div>
-        </a>
-        <a href="https://www.kancloud.cn/loqhcn/mulo_code/1242892" target="guanwang">
-          <div class="ui-app flex center center-line">文档中心</div>
         </a>
       </div>
     </div>
@@ -74,7 +74,7 @@ export default {
   box-shadow: 4px 4px 1px 1px #d9d9d9;
   border-radius: 5px;
   box-sizing: border-box;
-  padding: 10px;  
+  padding: 10px;
 
   .ui-app {
     width: 100px;

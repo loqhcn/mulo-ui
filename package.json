@@ -1,6 +1,6 @@
 {
   "name": "mulo-ui",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "mulo-ui 一个vue的前端常用组件库",
   "author": {
     "name": "mulo"
@@ -21,10 +21,11 @@
     "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
   "dependencies": {
-    "highlight.js": "^9.15.10",
-    "mulo-validate": "^1.0.0"
+    
   },
   "devDependencies": {
+    "highlight.js": "^9.15.10",
+    "mulo-validate": "^1.0.0",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",

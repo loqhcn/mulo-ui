@@ -5,10 +5,6 @@
 .outer_clear { zoom: 1; }    /*==for IE6/7 Maxthon2==*/
 .outer_clear:after { clear: both; content: '.'; display: block; width: 0; height: 0; visibility: hidden; font-size: 0; }   /*==for FF/chrome/opera/IE8==*/
 
-// 布局
-.row{
-    
-}
 
 //24col布局
 @for $i from 1 through 24 {

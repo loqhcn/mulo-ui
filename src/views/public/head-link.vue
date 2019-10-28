@@ -13,6 +13,9 @@
       <li>
         <router-link class="routelink" to="/index/components-web">web组件</router-link>
       </li>
+       <li>
+        <router-link class="routelink" to="/index/css-doc">css样式类</router-link>
+      </li>
       <li>
         <router-link class="routelink" to="/index/tutorial">教程</router-link>
       </li>
