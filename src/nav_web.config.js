@@ -12,7 +12,7 @@ export default {
                 },
                 {
                     path: 'install',
-                    name: '安装说明'
+                    name: '安装'
                 },
                 {
                     path: 'style',

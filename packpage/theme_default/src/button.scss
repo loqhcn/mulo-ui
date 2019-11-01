@@ -5,11 +5,23 @@
 .btn {
   border: 0px;
   background-color: $color-pink;
+  border-color: $color-pink;
   box-sizing: border-box;
   padding: 0.3rem 0.9rem;
   font-size: 1rem;
   color: white;
   border-radius: 0.2rem;
+  text-align: center;
+  width: unset;
+  transition: color 1s;
+  
+  &:hover {
+    color: $color-default;
+    text-decoration: none;
+  }
+}
+.btn.full{
+  width: 100%;
 }
 .btn.default {
   background-color: $btn-default;
@@ -41,4 +53,3 @@
 .btn.green {
   background-color: $color-green;
 }
-

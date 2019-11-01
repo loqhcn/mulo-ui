@@ -1,0 +1,61 @@
+// 行元素
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+//容器
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container.container-full{
+  padding-right: 0;
+  padding-left: 0;
+}
+//24col网格系统
+@for $i from 1 through 24 {
+  .col-#{$i} {
+    width: 4.1666% * $i;
+  }
+}
+
+@media (min-width: 540px) {
+  //24col布局
+  @for $i from 1 through 24 {
+    .col-sm-#{$i} {
+      width: 4.1666% * $i;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  //24col布局
+  @for $i from 1 through 24 {
+    .col-md-#{$i} {
+      width: 4.1666% * $i;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  //24col布局
+  @for $i from 1 through 24 {
+    .col-lg-#{$i} {
+      width: 4.1666% * $i;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  //24col布局
+  @for $i from 1 through 24 {
+    .col-xl-#{$i} {
+      width: 4.1666% * $i;
+    }
+  }
+}

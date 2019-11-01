@@ -17,11 +17,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js",
-    
     "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
   "dependencies": {
-    
+    "markdown-it-table-of-contents": "^0.4.4"
   },
   "devDependencies": {
     "highlight.js": "^9.15.10",

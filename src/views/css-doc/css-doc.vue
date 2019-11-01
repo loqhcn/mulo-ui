@@ -68,6 +68,7 @@ export default {
 .doc-detail {
   padding: 0.5rem;
   box-sizing: border-box;
+  
 }
 .router-link-active {
   color: red;

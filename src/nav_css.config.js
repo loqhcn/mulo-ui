@@ -29,7 +29,42 @@ export default {
                     name: '栅格系统'
                 },
             ]
-        }
+        },
+        {
+            title: '基础组件',
+            menus: [
+                {
+                    path: 'button',
+                    name: '按钮'
+                },
+                {
+                    path: 'table',
+                    name: '表格'
+                },
+                {
+                    path: 'form',
+                    name: '表单'
+                }
+            ]
+        },
+        {
+            title: '移动端布局示例',
+            menus: [
+                {
+                    path: 'demo-mobile-fiexd',
+                    name: '固定栏目footer,header'
+                },
+                {
+                    path: 'table',
+                    name: '表格'
+                },
+                {
+                    path: 'form',
+                    name: '表单'
+                }
+            ]
+        },
+        
     ],
     //英文
     "en-us": [

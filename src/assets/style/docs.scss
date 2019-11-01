@@ -32,3 +32,64 @@
 .header-anchor {
   display: none;
 }
+
+.demo-container {
+  width: 15rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin: 0.5rem;
+  height: fit-content;
+}
+.demo-container-col {
+  height: 15rem;
+  width: fit-content;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+.demo-div {
+  padding: 0.3rem;
+  border: 1px solid #ff9800;
+
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.doc-detail {
+  width: 80vw;
+  box-sizing: border-box;
+}
+
+//toc内容表导航
+.table-of-contents {
+  position: fixed;
+  z-index: 1111;
+  top: 10%;
+  right: 0.5rem;
+  width: 18vw;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 5px;
+  padding-top: 1rem;
+  li{
+    padding:.3rem 0;
+    ul{
+      li{
+        padding-left:.7rem;
+
+        &::before{
+          content: '-';
+        }
+      }
+    }
+  }
+  a{
+    color:black;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>基本进度条</h2>
+        <p>要创建一个默认的进度条，可以在容器元素上添加 .progress 类，在子元素上添加 progress-bar 类，并设置进度条进度情况：:</p>
+        <div class="progress">
+            <div class="progress-bar" style="width:70%"></div>
+        </div>
+
+        <input type="text" class="input">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+<style>
+    .container .row>div{
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid gray;
+    }
+
+</style>
+</body>
+
+</html>

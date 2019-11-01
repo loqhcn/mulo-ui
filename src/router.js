@@ -14,16 +14,16 @@ import navMibile from './nav_mobile.config.js'
 import navCss from './nav_css.config.js'
 var webComponentRoute = [];
 
-webComponentRoute = loadMap(navWeb['zh-cn'], 'zh-cn','web');
+webComponentRoute = loadMap(navWeb['zh-cn'], 'zh-cn', 'web');
 
-var mobileComponentRoute = loadMap(navMibile['zh-cn'], 'zh-cn','mobile');
+var mobileComponentRoute = loadMap(navMibile['zh-cn'], 'zh-cn', 'mobile');
 
-var cssComponentRoute = loadMap(navCss['zh-cn'], 'zh-cn','css');
+var cssComponentRoute = loadMap(navCss['zh-cn'], 'zh-cn', 'css');
 
 
 //加载路由文档路由列表
-function loadMap(routesSet, lang,type) {
-  type=type||'web'; // web mobile css 
+function loadMap(routesSet, lang, type) {
+  type = type || 'web'; // web mobile css 
   var routes = [];
   routesSet.forEach(groupInfo => {
     groupInfo.menus.forEach(p => {
@@ -37,6 +37,7 @@ function loadMap(routesSet, lang,type) {
 }
 
 export default new Router({
+  mode:'history',
   routes: [
     {
       path: '/',
@@ -63,7 +64,7 @@ export default new Router({
           component: () => import('./views/components/components.vue'),
           //组件文档
           children: [
-            { path: '', component: () => import('./views/components/start.vue') },
+            { path: '', redirect: 'index' },
             ...mobileComponentRoute
           ]
         },
@@ -73,17 +74,7 @@ export default new Router({
           component: () => import('./views/components-web/components-web.vue'),
           //组件文档
           children: [
-            { path: '', component: () => import('./views/components-web/start.vue') },
-            ...webComponentRoute
-          ]
-        },
-        //web组件
-        {
-          path: 'components-web',
-          component: () => import('./views/components-web/components-web.vue'),
-          //组件文档
-          children: [
-            { path: '', component: () => import('./views/components-web/start.vue') },
+            { path: '', redirect: 'index' },
             ...webComponentRoute
           ]
         },
@@ -93,7 +84,7 @@ export default new Router({
           component: () => import('./views/css-doc/css-doc.vue'),
           //组件文档
           children: [
-            { path: '', component: () => import('./views/components-web/start.vue') },
+            { path: '', redirect: 'index' },
             ...cssComponentRoute
           ]
         },
