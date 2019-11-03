@@ -55,8 +55,8 @@ export default {
                     name: '固定栏目footer,header'
                 },
                 {
-                    path: 'table',
-                    name: '表格'
+                    path: 'test',
+                    name: 'test'
                 },
                 {
                     path: 'form',

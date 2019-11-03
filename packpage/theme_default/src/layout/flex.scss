@@ -52,19 +52,19 @@
     justify-content: space-around;
   }
   //交叉轴对其方式
-  .flex.start-line {
+  .flex.start-item {
     align-items: flex-start;
   }
-  .flex.end-line {
+  .flex.end-item {
     align-items: flex-end;
   }
-  .flex.center-line {
+  .flex.center-item {
     align-items: center;
   } //上下居中
-  .flex.baseline-line {
+  .flex.baseline-item {
     align-items: baseline;
   }
-  .flex.stretch-line {
+  .flex.stretch-item {
     align-items: stretch;
   }
   //多线轴对其方式

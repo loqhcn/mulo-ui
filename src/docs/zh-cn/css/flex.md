@@ -52,7 +52,7 @@
 :::
 
 ## 行内排不下如何换行
-### 水电费收费
+
 - nowrap 不换行,把元素挤进去
 :::demo
 ```html
@@ -92,26 +92,16 @@
 ```
 :::
 
-## 主轴上面的对其方式
-:::demo
-```html
-<template>
-    <div class="container">
-        <div class="row flex wrap">
-            <div v-for="x in 7" class="col-4 demo-div"></div>
-        </div>
-    </div>
-</template>
-```
-:::
 
-- wrap-reverse 换行，第一行在下方。
+
+## 主轴上面的对其方式
+
 :::demo
 ```html
 <template>
     <div class="container">
         <div class="row  ">
-             <h4>开始位置 flex start </h4>
+             <h4>开始位置 .flex.start </h4>
             <div  class="col-24 demo-div  flex start">
                <div class="demo-div"></div>
             </div>
@@ -127,10 +117,54 @@
             <div  class="col-24 demo-div flex space-between">
                <div v-for="x in 5" class="demo-div"></div>
             </div>
-             <h4>.flex.space-around</h4>
-             <h4>每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</h4>
+             <h4 class="col-24">.flex.space-around</h4>
+             <h4 class="col-24">每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</h4>
              <div  class="col-24 demo-div flex space-around">
                <div  v-for="x in 5"  class="demo-div"></div>
+            </div>
+        </div>
+    </div>
+</template>
+```
+:::
+
+
+## 交叉轴上的对其方式
+
+:::demo
+```html
+<template>
+    <div class="container">
+        <div class="row">
+            <h4 class="col-24">开始位置 .flex.start-item </h4>
+            <div  class="col-8 demo-div flex start-item" style="height:6rem" >
+               <div v-for="x in 5" class="demo-div" :style="{height:`${x}rem`,'margin-left':'1rem'}"></div>
+            </div>
+
+            <h4 class="col-24">底部.flex.end-item</h4>
+            <div  class="col-8 demo-div flex end-item" style="height:6rem" >
+               <div v-for="x in 5" class="demo-div" :style="{height:`${x}rem`,'margin-left':'1rem'}"></div>
+            </div>
+
+            <h4 class="col-24" >居中.flex.center-item</h4>
+            <div  class="col-8 demo-div flex center-item" style="height:6rem" >
+               <div v-for="x in 5" class="demo-div" :style="{height:`${x}rem`,'margin-left':'1rem'}"></div>
+            </div>
+
+            <h4 class="col-24" >项目的第一行文字的基线对齐 .flex.baseline-item</h4>
+            <div  class="col-8 demo-div flex baseline-item" style="height:4rem" >
+               <div v-for="x in 4" class="demo-div" :style="{'margin-left':'1rem'}">
+                   text
+               </div>
+               <div class="demo-div" :style="{'margin-left':'1rem','padding-top':'1rem'}">
+                   text
+               </div>
+            </div>
+
+             <h4 class="col-24">.flex.stretch-item</h4>
+             <h4 class="col-24">如果项目未设置高度或设为auto 将占满整个容器的高度</h4>
+             <div  class="col-8 demo-div flex stretch-item" style="height:6rem" >
+              <div v-for="x in 5" class="demo-div" :style="{ 'margin-left':'1rem'}"></div>
             </div>
         </div>
     </div>

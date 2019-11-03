@@ -14,8 +14,11 @@ module.exports = {
                     loader: require.resolve("./src/utils/md-loader/index.js")
                 }
             ],
+
         },
         );
+      
+
     },
     pages: {
         index: {
