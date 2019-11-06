@@ -1,6 +1,6 @@
 {
   "name": "mulo-ui",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "mulo-ui 一个vue的前端常用组件库",
   "author": {
     "name": "mulo"
@@ -12,6 +12,7 @@
     "style",
     "lib"
   ],
+  
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -72,6 +73,12 @@
       "autoprefixer": {}
     }
   },
+  "keywords": [
+    "mulo",
+    "vue",
+    "css",
+    "components"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions"
