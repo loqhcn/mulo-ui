@@ -6,7 +6,6 @@ import store from './store'
 Vue.config.productionTip = false
 
 
-const mdLoader  = require("./utils/md-loader-mulo/index.js")
 
 
 //mulo-ui样式

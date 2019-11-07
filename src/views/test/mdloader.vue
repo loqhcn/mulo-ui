@@ -5,7 +5,6 @@
 </template>
 
 <script>
-const mdLoader  = require("./../../utils/md-loader-mulo/index.js")
 
 const  {
 lqh,ws
