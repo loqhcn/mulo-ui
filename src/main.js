@@ -58,8 +58,11 @@ Vue.component('head-link', headlink)
 
 //文档功能内嵌组件
 import DemoBlock from './docs/demo-block'
-Vue.component('demo-block',DemoBlock)
 
+Vue.component('demo-block',DemoBlock)
+import testComponent from './views/test/test1.vue'
+console.log(testComponent)
+window.testComponent = testComponent;
 import 'highlight.js/styles/color-brewer.css';
 
 //TODO 代码高亮  在路由渲染后执行的

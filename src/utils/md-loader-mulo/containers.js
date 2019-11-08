@@ -1,7 +1,6 @@
 const mdContainer = require('markdown-it-container');
 
 // 代码块放进 demo-block中
-
 module.exports = md => {
   md.use(mdContainer, 'demo', {
     validate(params) {

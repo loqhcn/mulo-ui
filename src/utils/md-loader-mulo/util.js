@@ -35,6 +35,7 @@ function genInlineComponentText(template, script) {
     compiler
   };
   const compiled = compileTemplate(finalOptions);
+  console.log(compiled)
   // tips
   if (compiled.tips && compiled.tips.length) {
     compiled.tips.forEach(tip => {
@@ -53,6 +54,7 @@ function genInlineComponentText(template, script) {
     ${compiled.code}
   `;
   // todo: 这里采用了硬编码有待改进
+  // TODO 加载脚本几
   script = script.trim();
   if (script) {
     script = script.replace(/export\s+default/, 'const democomponentExport =');

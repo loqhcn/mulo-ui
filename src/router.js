@@ -48,6 +48,10 @@ export default new Router({
       path: '/test/mdloader',
       component: () => import('./views/test/mdloader.vue')
     },
+    {
+      path: '/test/test1',
+      component: () => import('./views/test/test1.vue')
+    },
 
 
     //组件列表
