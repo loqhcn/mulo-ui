@@ -2,7 +2,7 @@
     <div class="mulo-admin-login">
         后台模板
 
-        <router-link to="/admin/login/login">登录</router-link>
+        <router-link to="/tpl_admin/login/login">登录</router-link>
 
     </div>
 </template>

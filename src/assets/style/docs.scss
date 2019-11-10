@@ -23,6 +23,9 @@
   background-color: white;
   border-radius: 5px;
   padding: 1rem;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  
 }
 .mulo-ui-docs > * {
   margin: 0.5rem 0;

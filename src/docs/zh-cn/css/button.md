@@ -1,15 +1,19 @@
 [[toc]]
 ## 按钮组件
 
-<div style="width:30rem">
-<a class="btn">基础按钮</a>
-<a class="btn full">撑满宽度</a>
+
+<div class="flex column" style="width:30rem" >
+    <div class="w100"><button class="btn">基础按钮</button></div>
+    <div class="w100"><button class="btn full">撑满宽度</button></div>
 </div>
 
 
+
 ```html
-<a class="btn">基础按钮</a>
-<button class="btn full">撑满宽度</button>
+<div class="flex column" style="width:30rem" >
+    <div class="w100"><button class="btn">基础按钮</button></div>
+    <div class="w100"><button class="btn full">撑满宽度</button></div>
+</div>
 ```
 
 

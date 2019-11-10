@@ -9,7 +9,7 @@
       </div>
       <div class="input-row">
         <label for>密码</label>
-        <input v-model="pass"  class="form-control" type="password" />
+        <input v-model="pass"   class="form-control" type="password" />
       </div>
       <div class="login-btns flex space-between">
         <button class="btn login" @click="login()">登录</button>

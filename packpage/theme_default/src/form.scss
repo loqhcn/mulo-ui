@@ -1,6 +1,13 @@
-input.input{
-    min-width: 5rem;
-    border: 1px solid #ff0000;
+@import "./common/var.scss";
+
+input.form-control{
+    min-width: 5em;
+    border:none;
+    padding: .5em 0;
+    border-bottom: 1px solid $color-default;
+}
+input.form-control.border{
+    border:1px solid $color-default;
 }
 
 

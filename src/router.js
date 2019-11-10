@@ -107,7 +107,7 @@ export default new Router({
           name: 'tool',
           component: () => import('./views/tool/tool.vue'),
         },
-        { path: 'admin', component: () => import('./views/admin/admin.vue') },
+        { path: 'admin', component: () => import('./views/tpl_admin/admin.vue') },
       ]
     },
 
@@ -142,7 +142,7 @@ export default new Router({
 
     // # begin 后台模板
 
-    { path: '/admin/login/login', component: () => import('./views/admin/login/login.vue') },
+    { path: '/tpl_admin/login/login', component: () => import('./views/tpl_admin/login/login.vue') },
 
 
     // # end 后台模板

@@ -1,0 +1,25 @@
+@import "./common/var.scss";
+
+//颜色
+@each $showtype,
+  $colorinfo
+    in (
+      success: $color-success,
+      warning: $color-warning,
+      danger: $color-danger,
+      info: $color-info,
+      default: $color-default,
+      "white": $color-white,
+      "primary": $color-primary
+    )
+{
+  .color-#{$showtype} {
+    color: $colorinfo;
+  }
+  .color-#{$showtype}-bg {
+    background-color: $colorinfo;
+  }
+  .color-#{$showtype}-border {
+    border-color: $colorinfo;
+  }
+}

@@ -28,11 +28,24 @@ export default {
                     path: 'grid',
                     name: '栅格系统'
                 },
+                {
+                    path: 'container',
+                    name: '布局容器'
+                },
+                {
+                    path: 'utilities',
+                    name: '实用样式'
+                },
+                
             ]
         },
         {
             title: '基础组件',
             menus: [
+                {
+                    path: 'color',
+                    name: '颜色'
+                },
                 {
                     path: 'button',
                     name: '按钮'
