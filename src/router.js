@@ -143,6 +143,8 @@ export default new Router({
     // # begin 后台模板
 
     { path: '/tpl_admin/login/login', component: () => import('./views/tpl_admin/login/login.vue') },
+    { path: '/tpl_admin/menu/menu', component: () => import('./views/tpl_admin/menu/menu.vue') },
+
 
 
     // # end 后台模板
