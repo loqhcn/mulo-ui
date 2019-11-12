@@ -1,0 +1,74 @@
+@import "./common/var.scss";
+
+$nav-height: 2rem;
+$nav-item-left: 0.6rem; // 每层深入增加距离
+$nav-item-left-default: 1rem; //第二层基础距离
+
+$nav-line-top:0.3rem; // 横向布局 距离上方
+.navmenu {
+  width: 20rem;
+  flex-wrap: wrap;
+  display: flex;
+  display: -webkit-flex;
+
+  //菜单栏目-子菜单嵌套时,第一个识别为当前菜单
+  & > .navmenu-item > *:first-child {
+    padding-left: 0.3rem;
+  }
+  .navmenu-item {
+    vertical-align: middle;
+    box-sizing: border-box;
+
+    & > *:first-child {
+      height: $nav-height;
+      display: flex;
+      display: -webkit-flex;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      align-items: center;
+    }
+  }
+  //## 横向布局
+  &>.navmenu-item{
+      position: relative;
+    
+   
+  }
+
+  //## 纵向布局
+  &.column {
+    width: 10rem;
+    min-height: 20rem;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    //第二层菜单开始启用padding边距
+    & > .navmenu-item {
+      margin-left: 0;
+      .navmenu-item {
+        padding-left: $nav-item-left;
+      }
+      & > .navmenu-item {
+        padding-left: $nav-item-left-default + $nav-item-left;
+      }
+    }
+  }
+
+  //## 配色
+  color: $color-font;
+  background-color: $color-white;
+  //### 黑暗配色
+  &.drak {
+    color: $color-white;
+    background-color: $color-nav-bg;
+    //二级菜单背景色
+    .navmenu-item {
+      background-color: $color-nav-item-bg;
+    }
+    //一级菜单
+    & > .navmenu-item {
+      background-color: $color-nav-bg;
+    }
+  }
+}

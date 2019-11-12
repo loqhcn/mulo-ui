@@ -2,29 +2,35 @@
 ## 按钮组件
 
 
-<div class="flex column" style="width:30rem" >
-    <div class="w100"><button class="btn">基础按钮</button></div>
-    <div class="w100"><button class="btn full">撑满宽度</button></div>
+<div class="flex w100 item-margin-3" >
+        <button class="btn btn-default">基础按钮</button>
+        <button class="btn btn-success">success</button>
+        <button class="btn btn-warning">warning</button>
+        <button class="btn btn-danger">danger</button>
+        <button class="btn btn-info">info</button>
+        <button class="btn btn-primary">primary</button>
 </div>
-
-
 
 ```html
-<div class="flex column" style="width:30rem" >
-    <div class="w100"><button class="btn">基础按钮</button></div>
-    <div class="w100"><button class="btn full">撑满宽度</button></div>
+
+<div class="flex w100 item-margin-3" >
+    <button class="btn btn-default">基础按钮</button>
+    <button class="btn btn-success">success</button>
+    <button class="btn btn-warning">warning</button>
+    <button class="btn btn-danger">danger</button>
+    <button class="btn btn-info">info</button>
+    <button class="btn btn-primary">primary</button>
 </div>
+
 ```
 
 
 ## 撑满 .full
 
-<div style="width:30rem">
-<button class="btn full">撑满宽度</button>
-</div>
+<div class="w100"><button class="btn full">撑满宽度</button></div>
+
 
 ```html
-<div style="width:30rem">
-<button class="btn full">撑满宽度</button>
-</div>
+<div class="w100"><button class="btn full">撑满宽度</button></div>
+
 ```

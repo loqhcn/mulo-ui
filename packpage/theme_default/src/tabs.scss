@@ -3,12 +3,13 @@
 .tabs {
   width: 100%;
   box-sizing: border-box;
-  
+  font-size: 0;
+  display: flex;
+  display: -webkit-flex;
+
   // ## 基础边框布局
   & > * {
-    display: flex;
     box-sizing: border-box;
-    display: inline-flex;
     flex-wrap: nowrap;
     text-align: left;
     margin-right: 1rem;
@@ -52,14 +53,14 @@
   }
 
   // ## 带边框的样式
-  &.border {
-    &:after{
-        content: unset;
+  &.tabs-border {
+    &:after {
+      content: unset;
     }
     border-bottom: 1px solid $color-border-1;
   }
-  &.border > * {
-      border-bottom: unset;
+  &.tabs-border > * {
+    border-bottom: unset;
     //首末圆角
     &:first-child {
       border-top-left-radius: $radius-default;
@@ -69,28 +70,26 @@
     }
 
     border: 1px solid $color-border-1;
-    border-bottom:unset;
-    
+    border-bottom: unset;
+
     text-align: center;
     margin-right: unset;
-    padding: .2rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     //带边框的栏目激活
     &.active {
-
       border-bottom: unset;
-      
-      &:after{
-          content: "";
-          background-color:$color-white;
-          bottom: -1px;
-          height: 1px;
-          width: 100%;
+
+      &:after {
+        content: "";
+        background-color: $color-white;
+        bottom: -1px;
+        height: 1px;
+        width: 100%;
       }
     }
-    
   }
   //连续项目去除左边框
-  &.border > *+*{
+  &.tabs-border > * + * {
     border-left: unset;
   }
 }

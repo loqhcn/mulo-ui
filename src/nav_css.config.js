@@ -61,20 +61,23 @@ export default {
             ]
         },
         {
+            title: 'pc端布局',
+            menus: [
+                {
+                    path: 'tabs',
+                    name: '标签卡'
+                },
+                
+            ]
+        },
+        {
             title: '移动端布局示例',
             menus: [
                 {
                     path: 'demo-mobile-fiexd',
                     name: '固定栏目footer,header'
                 },
-                {
-                    path: 'test',
-                    name: 'test'
-                },
-                {
-                    path: 'form',
-                    name: '表单'
-                }
+                
             ]
         },
         

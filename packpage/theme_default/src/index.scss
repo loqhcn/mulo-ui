@@ -8,15 +8,19 @@
 @import './layout/grid.scss';
 @import './layout/container.scss';
 
-//组件
-@import './color.scss';
+
 //按钮
 @import './button.scss';
 //表单
 @import './form.scss';
+//导航菜单
+@import './navmenu.scss';
 //表格
 @import './table.scss';
 //标签页
 @import './tabs.scss';
 //实用样式
 @import './layout/utilities.scss';
+
+//颜色
+@import './color.scss';

@@ -2,7 +2,6 @@
   <div>
     <head-link class="fixed-header"></head-link>
     <div class="flex column">
-      <!--  -->
       <router-view :style="{'margin-top':`${headerHeight}px`}" ></router-view>
     </div>
   </div>

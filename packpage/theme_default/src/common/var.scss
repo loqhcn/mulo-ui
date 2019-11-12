@@ -1,14 +1,19 @@
 // # 颜色
+
+//场景颜色
 $color-success: #67c23a;
 $color-warning: #e6a23c;
 $color-danger: #f56c6c;
 $color-info: #909399;
 $color-default:rgb(243, 132, 57);
-$color-white:white;
 $color-primary: #409eff;
 
-$color-pink: #cc5f7c; //粉色花瓣
+//常用颜色
+$color-white:white;
+$color-white-dark:#FCFCFC; //暗白色 用于一些背景
+$color-font:rgb(19, 19, 19); //默认文字
 
+$color-pink: #cc5f7c; //粉色花瓣
 $color-green: #20360c; //花梗
 
 // # 边框颜色
@@ -19,6 +24,14 @@ $color-border-5:#F2F6FC;
 
 //带active的边框
 $color-active-border:#409eff;
+//navmenu背景
+
+$color-nav-bg:#545C64;
+$color-nav-item-bg:rgb(37, 43, 49);
+
+
 
 // # 圆角设置
 $radius-default:5px; //默认圆角设置
+
+
