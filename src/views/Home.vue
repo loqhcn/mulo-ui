@@ -18,6 +18,9 @@
         <a href="https://www.kancloud.cn/loqhcn/mulo_code/1242892" target="guanwang">
           <div class="aligin-center">文档中心</div>
         </a>
+        <a href="http://appbuild.loqh.cn" target="guanwang">
+          <div class="aligin-center">AppBuild</div>
+        </a>
         <a href="http://www.loqh.cn" target="guanwang">
           <div class="aligin-center">官网</div>
         </a>
@@ -30,12 +33,8 @@
         <a href="http://www.loqh.cn/apps" target="guanwang">
           <div class="aligin-center">个人应用</div>
         </a>
-
         <a href="http://framework.loqh.cn" target="guanwang">
           <div class="aligin-center">开发架构</div>
-        </a>
-        <a href="http://www.loqh.cn" target="guanwang">
-          <div class="aligin-center">SamsBuild</div>
         </a>
       </div>
     </div>

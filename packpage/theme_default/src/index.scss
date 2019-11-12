@@ -1,17 +1,22 @@
-
+//全局默认样式
 @import './common/default.scss';
-
+//flex布局
 @import './layout/flex.scss';
+//基础布局
 @import './layout/layout.scss';
+//栅格系统
 @import './layout/grid.scss';
 @import './layout/container.scss';
 
 //组件
 @import './color.scss';
+//按钮
 @import './button.scss';
+//表单
 @import './form.scss';
+//表格
 @import './table.scss';
-
-
-
+//标签页
+@import './tabs.scss';
+//实用样式
 @import './layout/utilities.scss';

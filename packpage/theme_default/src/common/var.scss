@@ -6,10 +6,10 @@ $color-info: #909399;
 $color-default:rgb(243, 132, 57);
 $color-white:white;
 $color-primary: #409eff;
-//粉色花瓣
-$color-pink: #cc5f7c;
-//花梗
-$color-green: #20360c;
+
+$color-pink: #cc5f7c; //粉色花瓣
+
+$color-green: #20360c; //花梗
 
 // # 边框颜色
 $color-border-1:#DCDFE6;
@@ -17,3 +17,8 @@ $color-border-2:#E4E7ED;
 $color-border-4:#EBEEF5;
 $color-border-5:#F2F6FC;
 
+//带active的边框
+$color-active-border:#409eff;
+
+// # 圆角设置
+$radius-default:5px; //默认圆角设置

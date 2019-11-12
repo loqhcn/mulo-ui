@@ -1,0 +1,96 @@
+@import "./common/var.scss";
+
+.tabs {
+  width: 100%;
+  box-sizing: border-box;
+  
+  // ## 基础边框布局
+  & > * {
+    display: flex;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    margin-right: 1rem;
+    font-size: 0.95rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+
+    &:hover {
+      color: $color-active-border;
+    }
+  }
+
+  //激活栏目
+  & > *.active {
+    // border-bottom-color: $color-active-border;
+    color: $color-active-border;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-active-border;
+      z-index: 2;
+    }
+  }
+
+  //下方边框
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e4e7ed;
+    z-index: 1;
+  }
+
+  // ## 带边框的样式
+  &.border {
+    &:after{
+        content: unset;
+    }
+    border-bottom: 1px solid $color-border-1;
+  }
+  &.border > * {
+      border-bottom: unset;
+    //首末圆角
+    &:first-child {
+      border-top-left-radius: $radius-default;
+    }
+    &:last-child {
+      border-top-right-radius: $radius-default;
+    }
+
+    border: 1px solid $color-border-1;
+    border-bottom:unset;
+    
+    text-align: center;
+    margin-right: unset;
+    padding: .2rem 0.5rem;
+    //带边框的栏目激活
+    &.active {
+
+      border-bottom: unset;
+      
+      &:after{
+          content: "";
+          background-color:$color-white;
+          bottom: -1px;
+          height: 1px;
+          width: 100%;
+      }
+    }
+    
+  }
+  //连续项目去除左边框
+  &.border > *+*{
+    border-left: unset;
+  }
+}
