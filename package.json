@@ -20,6 +20,7 @@
     "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "mulo-tools": "^1.0.0",
     "mulo-validate": "^1.0.0"
   },
