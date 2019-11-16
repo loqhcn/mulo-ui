@@ -47,6 +47,10 @@ import http_apitool from './lib/http_apitool'
 Vue.prototype.$http_apitool = http_apitool;
 window.$http_apitool = http_apitool;
 
+import http_admin from './lib/http_admin'
+Vue.prototype.$http_admin = http_admin;
+window.$http_admin = http_admin;
+
 //用户认证
 import Auth from './lib/Auth'
 Vue.prototype.$auth = new Auth();
