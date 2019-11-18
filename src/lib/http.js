@@ -5,7 +5,7 @@ import appConfig from '../config/app';
 import router from '../router'
 
 const instance = axios.create({
-  baseURL: appConfig.adminBaseUrl,
+  baseURL: appConfig.baseUrl,
   timeout: 30000,
   headers: {},
 });

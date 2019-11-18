@@ -5,7 +5,7 @@ export default {
     userSystemBaseUrl: "http://user.lqh.cn",
     apitoolBaseUrl: "http://user.lqh.cn",
     //后台管理系统演示
-    adminBaseUrl: "http://admin-tp6.lqh.cn",
+    baseUrl: "http://www.lqh.cn",
     //swoole
     // userSystemBaseUrl:"http://192.168.1.253:9501",
     // apitoolBaseUrl:"http://192.168.1.253:9501",
@@ -13,5 +13,4 @@ export default {
     //workmain  
     // userSystemBaseUrl:"http://192.168.1.253:2346",
     // apitoolBaseUrl:"http://192.168.1.253:2346",
-
 }

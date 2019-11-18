@@ -16,9 +16,9 @@
        <li>
         <router-link class="routelink" to="/index/css-doc">css样式类</router-link>
       </li>
-      <li>
+      <!-- <li>
         <router-link class="routelink" to="/index/tutorial">教程</router-link>
-      </li>
+      </li> -->
       <li>
         <router-link class="routelink" to="/index/tool">工具</router-link>
       </li>

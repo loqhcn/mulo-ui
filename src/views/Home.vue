@@ -15,26 +15,15 @@
     <div class="col-23 col-md-10 panel margin-auto mt-20">
       <div class="panel-title">更多</div>
       <div class="myapps flex wrap item-pr-10 item-pt-10">
-        <a href="https://www.kancloud.cn/loqhcn/mulo_code/1242892" target="guanwang">
-          <div class="aligin-center">文档中心</div>
-        </a>
-        <a href="http://appbuild.loqh.cn" target="guanwang">
-          <div class="aligin-center">AppBuild</div>
-        </a>
-        <a href="http://www.loqh.cn" target="guanwang">
-          <div class="aligin-center">官网</div>
-        </a>
-        <a href="http://template.loqh.cn" target="guanwang">
-          <div class="aligin-center">网页模板</div>
-        </a>
-        <a href="http://blog.loqh.cn" target="guanwang">
-          <div class="aligin-center">博客</div>
-        </a>
-        <a href="http://www.loqh.cn/apps" target="guanwang">
-          <div class="aligin-center">个人应用</div>
-        </a>
-        <a href="http://framework.loqh.cn" target="guanwang">
-          <div class="aligin-center">开发架构</div>
+       
+
+        <a
+          v-for="(li,index) in moreLinks"
+          :key="index"
+          :href="li.link"
+          target="guanwang"
+        >
+          <div class="aligin-center">{{li.name}}</div>
         </a>
       </div>
     </div>
@@ -47,6 +36,21 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "home",
+  data() {
+    return {
+      //更多链接
+      moreLinks: []
+    };
+  },
+  created() {
+    this.$http.post("/mulo/index/more_link", { system: "muloui" }).then(res => {
+      if (res.errno) {
+        this.toast(res.msg);
+        return;
+      }
+      this.moreLinks = res.data.list;
+    });
+  },
   components: {
     HelloWorld
   }
