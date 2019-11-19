@@ -10,17 +10,31 @@
   z-index: 1000;
 }
 
+// 面板
 .panel {
   padding: 1rem;
-  border-radius: 5px;
-  background-color: white;
+  border-radius: $radius-default;
+  background-color: $color-white;
 }
-.panel-title{
-  font-size: 1.3rem;
+.panel-title {
+  font-size: 1.1rem;
   font-weight: bold;
+  padding-bottom: $space-control;
+  border-bottom: 1px solid $color-border-1;
+  color: $color-info;
 }
-
+//容器占位
 .container-full {
   width: 100%;
   height: 100%;
+}
+
+//卡片
+.card{
+  position: relative;
+
+  //边框
+  background-color: $color-white;
+  border-radius: $radius-default;
+  padding:$space-control;
 }

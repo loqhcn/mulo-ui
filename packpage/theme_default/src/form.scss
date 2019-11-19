@@ -1,18 +1,58 @@
 @import "./common/var.scss";
 
-input.form-control{
-    min-width: 5em;
-    border:none;
-    padding: .5em 0;
-    border-bottom: 1px solid $color-default;
+input.form-control {
+  min-width: 5em;
+  border: none;
+  padding: 0.5em 0;
+  border-bottom: 1px solid $color-default;
+  font-size: 1rem;
+  padding: $space-control;
 }
-input.form-control.border{
-    border:1px solid $color-default;
+input.form-control.border {
+  border: 1px solid $color-default;
 }
 
+textarea.form-control {
+  background-color: $color-white;
+  border: 1px solid $color-border-1;
+  width: 100%;
+  min-height: 5rem;
+  padding: $space-control/2;
+  font-size: 1rem;
+  color: $color-font;
+  border-radius: $radius-default;
+}
 
-
-
-
-
-
+.form {
+  margin: auto;
+  
+  // 表单的标题在一行
+  & .form-label-inline{
+    
+  }
+}
+$form-item-label-width: 10rem;
+.form-item {
+  //行内
+  &.inline {
+    display: flex;
+    display: -ms-flexbox;
+    & > {
+      flex-basis: $form-item-label-width;
+    }
+    & > label,
+    & > .form-item-lavel {
+      text-align: right;
+    }
+  }
+  //表单标题
+  & > label,
+  & > .form-item-lavel {
+    width: $form-item-label-width;
+    text-align: left;
+    padding: 0 $space-control $space-control/2 $space-control;
+    padding-left: 0;
+    display: block;
+  }
+  padding: $space-control 0;
+}

@@ -23,7 +23,7 @@
         <router-link class="routelink" to="/index/tool">工具</router-link>
       </li>
       <li>
-        <router-link class="routelink" to="/index/admin">后台模板</router-link>
+        <router-link class="routelink" to="/index/admin">页面模板</router-link>
       </li>
       <li>
         <a href="https://github.com/loqhcn/mulo-ui" class="routelink" target="nextwindow">

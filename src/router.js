@@ -144,6 +144,8 @@ export default new Router({
 
     { path: '/tpl_admin/login/login', component: () => import('./views/tpl_admin/login/login.vue') },
     { path: '/tpl_admin/menu/menu', component: () => import('./views/tpl_admin/menu/menu.vue') },
+    { path: '/tpl_admin/form/form', component: () => import('./views/tpl_admin/form/form.vue') },
+    { path: '/tpl_admin/table/table', component: () => import('./views/tpl_admin/table/table.vue') },
 
 
 
