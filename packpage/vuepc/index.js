@@ -4,6 +4,8 @@ import Button from './button'
 
 import Col from './col'
 import Row from './row'
+import Menu from './menu'
+
 
 const install = function (Vue) {
     Vue.use(Toast);
@@ -11,6 +13,8 @@ const install = function (Vue) {
     Vue.use(Button);
     Vue.use(Col);
     Vue.use(Row);
+    Vue.use(Menu);
+
 }
 
 export default { 
