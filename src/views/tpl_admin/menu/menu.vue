@@ -1,6 +1,14 @@
 <template>
     <div>
-        menu
+        123
+        <o-menu>
+            <o-menu-item>1</o-menu-item>
+            <o-menu-item>1</o-menu-item>
+            <o-menu-item>1</o-menu-item>
+            <o-menu-item>1</o-menu-item>
+            <o-menu-item>1</o-menu-item>
+            <o-menu-item>1</o-menu-item>
+        </o-menu>
     </div>
 </template>
 

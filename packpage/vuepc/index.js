@@ -22,8 +22,8 @@ export default {
     install,
     Button,
     Icon,
-    
     Row,
-    Col
+    Col,
+    Menu
 };
 
