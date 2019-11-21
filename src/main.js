@@ -13,6 +13,10 @@ import './assets/style/app.scss'
 //md文档内部 演示代码 的样式
 import './docs/doc-style/index.scss'
 
+//图标
+import './../packpage/assets/iconfont-mulo-ui/iconfont.css'
+
+
 import muloui from './../packpage/vue/index'
 Vue.use(muloui);
 import toast from '../packpage/vuepc/toast'

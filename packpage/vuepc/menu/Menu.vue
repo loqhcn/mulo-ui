@@ -1,13 +1,24 @@
 <template>
-    <div>
-        菜单
+    <div class="menu " :class="{column:column}">
+        <slot name="title"></slot>
         <slot></slot>
     </div>
 </template>
 
 <script>
     export default {
-        name:'o-menu'
+        name:'o-menu',
+        props: {
+            column: {
+                type: Boolean,
+                default: false,
+            },
+        },
+        data() {
+            return {
+             
+            }
+        },
     }
 </script>
 
