@@ -1,4 +1,4 @@
-import ElCol from './src/col';
+import ElCol from './col';
 
 /* istanbul ignore next */
 ElCol.install = function(Vue) {

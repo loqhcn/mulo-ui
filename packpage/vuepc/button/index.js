@@ -1,9 +1,12 @@
+import ElButton from './button';
+import buttongroup from './button-group';
 
-import nowComponent from './button.vue';
+/* istanbul ignore next */
 
-//安装脚本
-nowComponent.install = function (Vue) {
-    Vue.component(nowComponent.name, nowComponent)
+
+export default {
+  install: function (Vue) {
+    Vue.component(ElButton.name, ElButton);
+    Vue.component(buttongroup.name, buttongroup);
+  }
 };
-
-export default nowComponent;

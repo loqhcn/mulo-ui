@@ -4,7 +4,19 @@ import Button from './button'
 
 import Col from './col'
 import Row from './row'
+
 import Menu from './menu'
+import Radio from './radio'
+import Checkbox from './checkbox'
+
+import Input from './input'
+import InputNumber from './input-number'
+import Select from './select'
+
+//自动计算
+import Autocomplete from './autocomplete'
+
+import Cascader from './cascader'
 
 
 const install = function (Vue) {
@@ -14,6 +26,14 @@ const install = function (Vue) {
     Vue.use(Col);
     Vue.use(Row);
     Vue.use(Menu);
+    Vue.use(Radio);
+    Vue.use(Checkbox);
+
+    Vue.use(Input);
+    Vue.use(InputNumber);
+    Vue.use(Select);
+    Vue.use(Autocomplete);
+ 
 
 }
 
@@ -24,6 +44,13 @@ export default {
     Icon,
     Row,
     Col,
-    Menu
+    Menu,
+    Radio,
+    Checkbox,
+    Input,
+    InputNumber,
+    Select,
+    Autocomplete,
+  
 };
 

@@ -1,4 +1,4 @@
-import Row from './src/row';
+import Row from './row';
 
 /* istanbul ignore next */
 Row.install = function(Vue) {

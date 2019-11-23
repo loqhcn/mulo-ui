@@ -4,7 +4,7 @@ $nav-height: 2rem;
 $nav-item-left: 0.6rem; // 每层深入增加距离
 $nav-item-left-default: 1rem; //第二层基础距离
 
-$nav-line-top:0.3rem; // 横向布局 距离上方
+$nav-line-top: 0.3rem; // 横向布局 距离上方
 .menu {
   width: 20rem;
   flex-wrap: wrap;
@@ -30,10 +30,8 @@ $nav-line-top:0.3rem; // 横向布局 距离上方
     }
   }
   //## 横向布局
-  &>.menu-item{
-      position: relative;
-    
-   
+  & > .menu-item {
+    position: relative;
   }
 
   //## 纵向布局
@@ -71,4 +69,23 @@ $nav-line-top:0.3rem; // 横向布局 距离上方
       background-color: $color-nav-bg;
     }
   }
+}
+
+//菜单折叠
+.menu-fold {
+  height: 0;
+}
+.menu-fold.active {
+  height: 100%;
+}
+
+.submenu__icon-arrow{
+  top: unset;
+}
+
+.menu-item-group-title {
+  padding: 0.5rem 0 0.5rem 1.2rem;
+  line-height: normal;
+  font-size: 1rem;
+  color: #909399;
 }

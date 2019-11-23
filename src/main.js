@@ -14,7 +14,7 @@ import './assets/style/app.scss'
 import './docs/doc-style/index.scss'
 
 //图标
-import './../packpage/assets/iconfont-mulo-ui/iconfont.css'
+// import './../packpage/assets/iconfont-mulo-ui/iconfont.css'
 
 
 import muloui from './../packpage/vue/index'

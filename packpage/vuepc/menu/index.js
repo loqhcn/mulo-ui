@@ -1,17 +1,24 @@
+import ElMenu from './menu.vue';
+import ElMenuItemGroup from './menu-item-group.vue';
+import ElMenuItem from './menu-item.vue';
+import submenu from './submenu.vue';
 
-import Menu from './Menu.vue';
-import MenuItem from './MenuItem.vue';
-import Submenu from './Submenu.vue';
+// /* istanbul ignore next */
+// ElMenu.install = function(Vue) {
+//   Vue.component(ElMenu.name, ElMenu);
+//   Vue.component(ElMenuItemGroup.name, ElMenuItemGroup);
+//   Vue.component(ElMenuItem.name, ElMenuItem);
+// };
 
-
-
-
+// export default ElMenu;
 
 export default {
-    install:function (Vue){
-        Vue.component(Menu.name, Menu)
-        Vue.component(MenuItem.name, MenuItem)
-        Vue.component(Submenu.name, Submenu)
+  install: function (Vue) {
+    Vue.component(ElMenu.name, ElMenu);
+    Vue.component(ElMenuItemGroup.name, ElMenuItemGroup);
+    Vue.component(ElMenuItem.name, ElMenuItem);
+    Vue.component(submenu.name, submenu);
 
-    }
+
+  }
 };
