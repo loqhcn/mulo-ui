@@ -1,7 +1,7 @@
 <script>
 import UploadList from './upload-list';
 import Upload from './upload';
-import ElProgress from 'mulo-ui/packpage/vuepc/progress';
+import ElProgress from './../progress';
 import Migrating from 'mulo-ui/packpage/mixins/migrating';
 
 function noop() {}

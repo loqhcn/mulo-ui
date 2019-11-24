@@ -48,9 +48,9 @@
   import Locale from 'mulo-ui/packpage/mixins/locale';
   import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
   import Dropdown from './dropdown';
-  import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
-  import ElCheckboxGroup from 'mulo-ui/packpage/vuepc/checkbox-group';
-  import ElScrollbar from 'mulo-ui/packpage/vuepc/scrollbar';
+  import ElCheckbox from './../checkbox';
+  import ElCheckboxGroup from './../checkbox/checkbox-group';
+  import ElScrollbar from './../scrollbar';
 
   export default {
     name: 'OTableFilterPanel',

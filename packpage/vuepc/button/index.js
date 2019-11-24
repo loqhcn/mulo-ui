@@ -1,5 +1,5 @@
-import ElButton from './button';
-import buttongroup from './button-group';
+import ElButton from './button.vue';
+import buttongroup from './button-group.vue';
 
 /* istanbul ignore next */
 

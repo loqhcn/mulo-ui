@@ -38,7 +38,7 @@
   import Migrating from 'mulo-ui/packpage/mixins/migrating';
 
   export default {
-    name: 'ORate',
+    name: 'o-rate',
 
     mixins: [Migrating],
 

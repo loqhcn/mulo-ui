@@ -32,7 +32,7 @@
 
 <script>
   import Color from './color';
-  import PickerDropdown from './components/picker-dropdown.vue';
+  import PickerDropdown from './picker-dropdown.vue';
   import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
   import Emitter from 'mulo-ui/packpage/mixins/emitter';
 

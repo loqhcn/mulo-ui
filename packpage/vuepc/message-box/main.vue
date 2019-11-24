@@ -81,8 +81,8 @@
 <script type="text/babel">
   import Popup from 'mulo-ui/packpage/utils/popup';
   import Locale from 'mulo-ui/packpage/mixins/locale';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElInput from './../input';
+  import ElButton from './../button';
   import { addClass, removeClass } from 'mulo-ui/packpage/utils/dom';
   import { t } from 'mulo-ui/packpage/locale';
   import Dialog from 'mulo-ui/packpage/utils/aria-dialog';

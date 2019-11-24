@@ -13,7 +13,7 @@
 import Migrating from 'mulo-ui/packpage/mixins/migrating';
 
 export default {
-  name: 'OSteps',
+  name: 'o-steps',
 
   mixins: [Migrating],
 

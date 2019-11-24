@@ -89,7 +89,7 @@ import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
 import { formatDate, parseDate, isDateObject, getWeekNumber } from 'mulo-ui/packpage/utils/date-util';
 import Popper from 'mulo-ui/packpage/utils/vue-popper';
 import Emitter from 'mulo-ui/packpage/mixins/emitter';
-import ElInput from 'mulo-ui/packpage/vuepc/input';
+import ElInput from './../input';
 import merge from 'mulo-ui/packpage/utils/merge';
 
 const NewPopper = {

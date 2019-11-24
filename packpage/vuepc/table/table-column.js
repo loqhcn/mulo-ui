@@ -1,6 +1,6 @@
 import { cellStarts, cellForced, defaultRenderCell, treeCellPrefix } from './config';
 import { mergeOptions, parseWidth, parseMinWidth, compose } from './util';
-import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
+import ElCheckbox from './../checkbox';
 
 let columnIdSeed = 1;
 

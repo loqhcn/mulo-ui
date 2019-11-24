@@ -1,7 +1,7 @@
 import Pager from './pager.vue';
-import ElSelect from 'mulo-ui/packpage/vuepc/select';
-import ElOption from 'mulo-ui/packpage/vuepc/option';
-import ElInput from 'mulo-ui/packpage/vuepc/input';
+import ElSelect from './../select';
+import ElOption from './../select/option';
+import ElInput from './../input';
 import Locale from 'mulo-ui/packpage/mixins/locale';
 import { valueEquals } from 'mulo-ui/packpage/utils/util';
 

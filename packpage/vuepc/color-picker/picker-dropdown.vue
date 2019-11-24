@@ -45,8 +45,8 @@
   import Predefine from './predefine';
   import Popper from 'mulo-ui/packpage/utils/vue-popper';
   import Locale from 'mulo-ui/packpage/mixins/locale';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElInput from './../input';
+  import ElButton from './../button';
 
   export default {
     name: 'el-color-picker-dropdown',

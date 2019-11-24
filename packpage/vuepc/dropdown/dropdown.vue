@@ -2,8 +2,8 @@
   import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
   import Emitter from 'mulo-ui/packpage/mixins/emitter';
   import Migrating from 'mulo-ui/packpage/mixins/migrating';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
-  import ElButtonGroup from 'mulo-ui/packpage/vuepc/button-group';
+  import ElButton from './../button';
+  import ElButtonGroup from './../button/button-group';
   import { generateId } from 'mulo-ui/packpage/utils/util';
 
   export default {

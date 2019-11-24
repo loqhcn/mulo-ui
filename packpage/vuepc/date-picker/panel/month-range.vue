@@ -88,8 +88,8 @@
   import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
   import Locale from 'mulo-ui/packpage/mixins/locale';
   import MonthTable from '../basic/month-table';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElInput from './../../input';
+  import ElButton from './../../button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {

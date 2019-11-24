@@ -42,7 +42,7 @@
 </template>
 
 <script>
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElButton from './../button';
   import Emitter from 'mulo-ui/packpage/mixins/emitter';
   import Locale from 'mulo-ui/packpage/mixins/locale';
   import TransferPanel from './transfer-panel.vue';

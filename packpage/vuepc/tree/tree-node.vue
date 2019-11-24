@@ -73,7 +73,7 @@
 
 <script type="text/jsx">
   import ElCollapseTransition from 'mulo-ui/packpage/transitions/collapse-transition';
-  import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
+  import ElCheckbox from './../checkbox';
   import emitter from 'mulo-ui/packpage/mixins/emitter';
   import { getNodeKey } from './model/util';
 

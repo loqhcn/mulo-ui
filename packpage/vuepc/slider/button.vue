@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import ElTooltip from 'mulo-ui/packpage/vuepc/tooltip';
+  import ElTooltip from './../tooltip';
 
   export default {
     name: 'OSliderButton',

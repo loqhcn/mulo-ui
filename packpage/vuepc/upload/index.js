@@ -1,4 +1,4 @@
-import Upload from '.';
+import Upload from './index.vue';
 
 /* istanbul ignore next */
 Upload.install = function(Vue) {

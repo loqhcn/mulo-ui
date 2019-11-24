@@ -36,8 +36,8 @@
 </template>
 
 <script>
-import ElPopover from 'mulo-ui/packpage/vuepc/popover';
-import ElButton from 'mulo-ui/packpage/vuepc/button';
+import ElPopover from './../popover';
+import ElButton from './../button';
 import {t} from 'mulo-ui/packpage/locale';
 
 export default {

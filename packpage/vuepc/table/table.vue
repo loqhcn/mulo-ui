@@ -213,7 +213,7 @@
 </template>
 
 <script type="text/babel">
-  import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
+  import ElCheckbox from './../checkbox';
   import { debounce, throttle } from 'throttle-debounce';
   import { addResizeListener, removeResizeListener } from 'mulo-ui/packpage/utils/resize-event';
   import Mousewheel from 'mulo-ui/packpage/directives/mousewheel';

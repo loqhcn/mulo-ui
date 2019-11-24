@@ -52,9 +52,9 @@
 </template>
 
 <script>
-  import ElCheckboxGroup from 'mulo-ui/packpage/vuepc/checkbox-group';
-  import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
+  import ElCheckboxGroup from './../checkbox/checkbox-group.vue';
+  import ElCheckbox from './../checkbox';
+  import ElInput from './../input';
   import Locale from 'mulo-ui/packpage/mixins/locale';
 
   export default {

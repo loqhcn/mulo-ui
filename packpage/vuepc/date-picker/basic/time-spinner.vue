@@ -101,8 +101,10 @@
 </template>
 
 <script type="text/babel">
-  import { getRangeHours, getRangeMinutes, modifyTime } from 'mulo-ui/packpage/utils/date-util';
-  import ElScrollbar from 'mulo-ui/packpage/vuepc/scrollbar';
+  
+// import { getRangeHours, getRangeMinutes, modifyTime } from 'mulo-ui/packpage/utils/date-util';
+  import { getRangeHours, getRangeMinutes, modifyTime } from './../../../../packpage/utils/date-util';
+  import ElScrollbar from './../../scrollbar';
   import RepeatClick from 'mulo-ui/packpage/directives/repeat-click';
 
   export default {

@@ -1,5 +1,5 @@
 import fecha from './date';
-import { t } from 'element-ui/src/locale';
+import { t } from 'mulo-ui/packpage/locale';
 
 const weeks = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];

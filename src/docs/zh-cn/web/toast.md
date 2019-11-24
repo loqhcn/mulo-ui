@@ -1,7 +1,7 @@
 ## 引入
 ~~~javascript
 // main.js中引入
-import toast from 'mulo-ui/packpage/vuepc/toast'
+import toast from './../toast'
 Vue.use(toast)
 ~~~
 

@@ -59,8 +59,8 @@
 <script>
 import Locale from 'mulo-ui/packpage/mixins/locale';
 import fecha from 'mulo-ui/packpage/utils/date';
-import ElButton from 'mulo-ui/packpage/vuepc/button';
-import ElButtonGroup from 'mulo-ui/packpage/vuepc/button-group';
+import ElButton from './../button';
+import ElButtonGroup from './../button/button-group';
 import DateTable from './date-table';
 import { validateRangeInOneMonth } from 'mulo-ui/packpage/utils/date-util';
 

@@ -19,7 +19,7 @@
 </template>
 
 <script type="text/babel">
-  import ElScrollbar from 'mulo-ui/packpage/vuepc/scrollbar';
+  import ElScrollbar from './../../scrollbar';
   import scrollIntoView from 'mulo-ui/packpage/utils/scroll-into-view';
 
   const parseTime = function(time) {

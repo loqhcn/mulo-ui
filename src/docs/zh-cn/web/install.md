@@ -15,7 +15,7 @@ Vue.use(MuloUiPc);
 ## 按需引入
 ```javascript
 // 引入单个组件示例
-import Button from 'mulo-ui/packpage/vuepc/button'
+import Button from './../button'
 Vue.use(Button);
 ```
 

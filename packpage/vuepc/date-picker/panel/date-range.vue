@@ -167,21 +167,21 @@
         </div>
       </div>
       <div class="el-picker-panel__footer" v-if="showTime">
-        <el-button
+        <o-button
           size="mini"
           type="text"
           class="el-picker-panel__link-btn"
           @click="handleClear">
           {{ t('el.datepicker.clear') }}
-        </el-button>
-        <el-button
+        </o-button>
+        <o-button
           plain
           size="mini"
           class="el-picker-panel__link-btn"
           :disabled="btnDisabled"
           @click="handleConfirm(false)">
           {{ t('el.datepicker.confirm') }}
-        </el-button>
+        </o-button>
       </div>
     </div>
   </transition>
@@ -207,8 +207,8 @@
   import Locale from 'mulo-ui/packpage/mixins/locale';
   import TimePicker from './time';
   import DateTable from '../basic/date-table';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElInput from './../../input';
+  import ElButton from './../../button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {

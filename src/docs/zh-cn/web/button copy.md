@@ -1,6 +1,6 @@
 ## 按钮组件
 ```javascript
-import button from 'mulo-ui/packpage/vuepc/button'
+import button from './../button'
 Vue.use(button)
 ```
 

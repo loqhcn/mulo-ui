@@ -64,7 +64,7 @@
 </template>
 <script>
   import Locale from 'mulo-ui/packpage/mixins/locale';
-  import ElProgress from 'mulo-ui/packpage/vuepc/progress';
+  import ElProgress from './../progress';
 
   export default {
 

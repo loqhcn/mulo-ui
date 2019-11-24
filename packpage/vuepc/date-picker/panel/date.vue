@@ -122,21 +122,21 @@
       <div
         class="el-picker-panel__footer"
         v-show="footerVisible && currentView === 'date'">
-        <el-button
+        <o-button
           size="mini"
           type="text"
           class="el-picker-panel__link-btn"
           @click="changeToNow"
           v-show="selectionMode !== 'dates'">
           {{ t('el.datepicker.now') }}
-        </el-button>
-        <el-button
+        </o-button>
+        <o-button
           plain
           size="mini"
           class="el-picker-panel__link-btn"
           @click="confirm">
           {{ t('el.datepicker.confirm') }}
-        </el-button>
+        </o-button>
       </div>
     </div>
   </transition>
@@ -164,8 +164,8 @@
   } from 'mulo-ui/packpage/utils/date-util';
   import Clickoutside from 'mulo-ui/packpage/utils/clickoutside';
   import Locale from 'mulo-ui/packpage/mixins/locale';
-  import ElInput from 'mulo-ui/packpage/vuepc/input';
-  import ElButton from 'mulo-ui/packpage/vuepc/button';
+  import ElInput from './../../input';
+  import ElButton from './../../button';
   import TimePicker from './time';
   import YearTable from '../basic/year-table';
   import MonthTable from '../basic/month-table';

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { hasClass, addClass, removeClass } from 'mulo-ui/packpage/utils/dom';
-import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
+import ElCheckbox from './../checkbox';
 import FilterPanel from './filter-panel.vue';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';

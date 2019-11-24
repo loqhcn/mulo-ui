@@ -1,8 +1,8 @@
 import { arrayFindIndex } from 'mulo-ui/packpage/utils/util';
 import { getCell, getColumnByCell, getRowIdentity } from './util';
 import { getStyle, hasClass, removeClass, addClass } from 'mulo-ui/packpage/utils/dom';
-import ElCheckbox from 'mulo-ui/packpage/vuepc/checkbox';
-import ElTooltip from 'mulo-ui/packpage/vuepc/tooltip';
+import ElCheckbox from './../checkbox';
+import ElTooltip from './../tooltip';
 import {debounce } from 'throttle-debounce';
 import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';

@@ -1,15 +1,42 @@
-<script>
-import ElScrollbar from 'mulo-ui/packpage/vuepc/scrollbar';
-import CascaderNode from './cascader-node.vue';
-import Locale from 'mulo-ui/packpage/mixins/locale';
-import { generateId } from 'mulo-ui/packpage/utils/util';
+<script >
+import ElScrollbar from "./../scrollbar";
+import CascaderNode from "./cascader-node.vue";
+import Locale from "mulo-ui/packpage/mixins/locale";
+import { generateId } from "mulo-ui/packpage/utils/util";
 
 export default {
-  name: 'OCascaderMenu',
+  render(h) {
+    const { isEmpty, menuId } = this;
+    const events = { nativeOn: {} };
+
+    // optimize hover to expand experience (#8010)
+    if (this.panel.isHoverMenu) {
+      events.nativeOn.mousemove = this.handleMouseMove;
+      // events.nativeOn.mouseleave = this.clearHoverZone;
+    }
+
+    return (
+      <el-scrollbar
+        tag="ul"
+        role="menu"
+        id={menuId}
+        class="el-cascader-menu"
+        wrap-class="el-cascader-menu__wrap"
+        view-class={{
+          "el-cascader-menu__list": true,
+          "is-empty": isEmpty
+        }}
+        {...events}
+      >
+        {isEmpty ? this.renderEmptyText(h) : this.renderNodeList(h)}
+      </el-scrollbar>
+    );
+  },
+  name: "o-cascader-menu",
 
   mixins: [Locale],
 
-  inject: ['panel'],
+  inject: ["panel"],
 
   components: {
     ElScrollbar,
@@ -65,18 +92,23 @@ export default {
           <path style="pointer-events: auto;" fill="transparent" d="M${startX} ${bottom} L${offsetWidth} ${offsetHeight} V${bottom} Z" />
         `;
       } else if (!hoverTimer) {
-        this.hoverTimer = setTimeout(this.clearHoverZone, this.panel.config.hoverThreshold);
+        this.hoverTimer = setTimeout(
+          this.clearHoverZone,
+          this.panel.config.hoverThreshold
+        );
       }
     },
     clearHoverZone() {
       const { hoverZone } = this.$refs;
       if (!hoverZone) return;
-      hoverZone.innerHTML = '';
+      hoverZone.innerHTML = "";
     },
 
     renderEmptyText(h) {
       return (
-        <div class="el-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
+        <div class="el-cascader-menu__empty-text">
+          {this.t("el.cascader.noData")}
+        </div>
       );
     },
     renderNodeList(h) {
@@ -92,47 +124,23 @@ export default {
         const { hasChildren } = node;
         return (
           <cascader-node
-            key={ node.uid }
-            node={ node }
-            node-id={ `${menuId}-${index}` }
-            aria-haspopup={ hasChildren }
-            aria-owns = { hasChildren ? menuId : null }
-            { ...events }></cascader-node>
+            key={node.uid}
+            node={node}
+            node-id={`${menuId}-${index}`}
+            aria-haspopup={hasChildren}
+            aria-owns={hasChildren ? menuId : null}
+            {...events}
+          ></cascader-node>
         );
       });
 
       return [
         ...nodes,
-        isHoverMenu ? <svg ref='hoverZone' class='el-cascader-menu__hover-zone'></svg> : null
+        isHoverMenu ? (
+          <svg ref="hoverZone" class="el-cascader-menu__hover-zone"></svg>
+        ) : null
       ];
     }
-  },
-
-  render(h) {
-    const { isEmpty, menuId } = this;
-    const events = { nativeOn: {} };
-
-    // optimize hover to expand experience (#8010)
-    if (this.panel.isHoverMenu) {
-      events.nativeOn.mousemove = this.handleMouseMove;
-      // events.nativeOn.mouseleave = this.clearHoverZone;
-    }
-
-    return (
-      <el-scrollbar
-        tag="ul"
-        role="menu"
-        id={ menuId }
-        class="el-cascader-menu"
-        wrap-class="el-cascader-menu__wrap"
-        view-class={{
-          'el-cascader-menu__list': true,
-          'is-empty': isEmpty
-        }}
-        { ...events }>
-        { isEmpty ? this.renderEmptyText(h) : this.renderNodeList(h) }
-      </el-scrollbar>
-    );
   }
 };
 </script>
