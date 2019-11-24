@@ -5,7 +5,7 @@ import ElCheckbox from './../checkbox';
 let columnIdSeed = 1;
 
 export default {
-  name: 'OTableColumn',
+  name: 'o-table-column',
 
   props: {
     type: {

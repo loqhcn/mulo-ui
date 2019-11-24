@@ -1,7 +1,7 @@
 @import "./var.scss";
 
 // 基础设置
-html{font-size: 16px;}
+html{font-size: 14px;}
 
 *, :after, :before { -webkit-box-sizing: border-box; box-sizing: border-box; /*-webkit-user-select: none; outline: none; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent; */}
 html,body{ height: 100%; background: $color-white-dark;  font-family: PingFangSC-Regular,Helvetica,Droid Sans,Arial,sans-serif;}

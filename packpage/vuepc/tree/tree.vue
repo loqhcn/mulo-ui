@@ -9,7 +9,7 @@
     }"
     role="tree"
   >
-    <el-tree-node
+    <o-tree-node
       v-for="child in root.childNodes"
       :node="child"
       :props="props"
@@ -18,7 +18,7 @@
       :key="getNodeKey(child)"
       :render-content="renderContent"
       @node-expand="handleNodeExpand">
-    </el-tree-node>
+    </o-tree-node>
     <div class="el-tree__empty-block" v-if="isEmpty">
       <span class="el-tree__empty-text">{{ emptyText }}</span>
     </div>
@@ -293,7 +293,7 @@
 
       handleKeydown(ev) {
         const currentItem = ev.target;
-        if (currentItem.className.indexOf('el-tree-node') === -1) return;
+        if (currentItem.className.indexOf('o-tree-node') === -1) return;
         const keyCode = ev.keyCode;
         this.treeItems = this.$el.querySelectorAll('.is-focusable[role=treeitem]');
         const currentIndex = this.treeItemArray.indexOf(currentItem);
@@ -422,7 +422,7 @@
           dropType = 'none';
         }
 
-        const iconPosition = dropNode.$el.querySelector('.el-tree-node__expand-icon').getBoundingClientRect();
+        const iconPosition = dropNode.$el.querySelector('.o-tree-node__expand-icon').getBoundingClientRect();
         const dropIndicator = this.$refs.dropIndicator;
         if (dropType === 'before') {
           indicatorTop = iconPosition.top - treePosition.top;

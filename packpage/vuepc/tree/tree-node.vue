@@ -57,7 +57,7 @@
         role="group"
         :aria-expanded="expanded"
       >
-        <el-tree-node
+        <o-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"
           :render-after-expand="renderAfterExpand"
@@ -65,7 +65,7 @@
           :key="getNodeKey(child)"
           :node="child"
           @node-expand="handleChildNodeExpand">
-        </el-tree-node>
+        </o-tree-node>
       </div>
     </el-collapse-transition>
   </div>
@@ -78,7 +78,7 @@
   import { getNodeKey } from './model/util';
 
   export default {
-    name: 'OTreeNode',
+    name: 'o-tree-node',
 
     componentName: 'ElTreeNode',
 

@@ -19,20 +19,20 @@
             size="mini">
           </el-input>
         </span>
-        <el-button
+        <o-button
           size="mini"
           type="text"
           class="el-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
-        </el-button>
-        <el-button
+        </o-button>
+        <o-button
           plain
           size="mini"
           class="el-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
-        </el-button>
+        </o-button>
       </div>
     </div>
   </transition>

@@ -26,7 +26,7 @@ import Update from './upload'
 
 import Rate from './rate'
 import ColorPicker from './color-picker'
-import Transfer from './transfer'
+// import Transfer from './transfer'
 import Form from './form'
 
 //data
@@ -93,7 +93,7 @@ const install = function (Vue) {
     Vue.use(Rate);
     Vue.use(ColorPicker);
 
-    Vue.use(Transfer);
+    // Vue.use(Transfer);
     Vue.use(Form);
 
     //data
@@ -157,7 +157,7 @@ export default {
     Update,
     Rate,
     ColorPicker,
-    Transfer,
+    // Transfer,
     Form,
     //data
     Table,

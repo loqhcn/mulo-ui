@@ -100,10 +100,10 @@ export default {
                     path: 'color-picker',
                     name: '颜色选择器'
                 },
-                {
-                    path: 'transfer',
-                    name: '穿梭框'
-                },
+                // {
+                //     path: 'transfer',
+                //     name: '穿梭框'
+                // },
                 {
                     path: 'form',
                     name: '表单'

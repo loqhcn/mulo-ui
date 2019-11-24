@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     blockClass() {
-      console.log("computed blockClass");
+      // console.log("computed blockClass");
       let paths = this.$router.currentRoute.path.split("/");
       return paths[paths.length - 2] + "-" + paths[paths.length-1];
     }
