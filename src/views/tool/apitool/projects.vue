@@ -21,7 +21,7 @@
         },
         methods: {
             getList() {
-               this.$http_apitool.post('/apitool/project/list').then(res=>{
+               this.$http_apitool.post('project/list').then(res=>{
                    if (res.errno) {
                        this.$toast(res.msg);
                        return;
@@ -30,7 +30,7 @@
                });
             },
             detail(id){
-                this.appRoute.go('/apitool/projects_detail',{id:id})
+                this.appRoute.go('/apitool/projects_detail',{project_id:id})
             }
         },
     }

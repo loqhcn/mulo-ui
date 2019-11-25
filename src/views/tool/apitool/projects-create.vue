@@ -3,17 +3,17 @@
     <div class="flex space-between">
       <div class="title">创建项目</div>
       <div>
-      
-        <router-link to="/apitool"><button class="btn btn-back">返回</button></router-link>
+        <router-link to="/apitool">
+          <button class="btn btn-back">返回</button>
+        </router-link>
       </div>
     </div>
     <div class="detail">
-      <div class="input-row">
-        <span>那啥</span>
-        <input v-model="project_name" type="text" placeholder="项目名称" />
+      <div class="input-row item-padding-5">
+        <o-input style="width:18rem" v-model="project_name" type="text" placeholder="项目名称" />
+        <button class="btn" @click="create">创建</button>
       </div>
     </div>
-    <button class="btn" @click="create">创建</button>
   </div>
 </template>
 

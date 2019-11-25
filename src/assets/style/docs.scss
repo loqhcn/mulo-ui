@@ -1,3 +1,4 @@
+@import './../../../packpage/theme_default/src/common/var.scss';
 // mulo-ui的markdown文档样式
 
 // 文档主题
@@ -5,7 +6,7 @@
   table {
     width: 100%;
     padding: 1rem;
-    background-color: white;
+    background-color: $color-bg;
     border-radius: 5px;
     box-shadow: 4px 3px 1px 1px #d2d2d2;
   }
@@ -20,7 +21,7 @@
   width: 100%;
   min-height: 1rem;
   border: 1px solid #d6d6d6;
-  background-color: white;
+  background-color: $color-bg;
   border-radius: 5px;
   padding: 1rem;
   border-bottom-left-radius: unset;
@@ -68,18 +69,20 @@
   box-sizing: border-box;
 }
 
+
 //toc内容表导航
 .table-of-contents {
   position: fixed;
   z-index: 1111;
   top: 10%;
   right: 0.5rem;
-  width: 18vw;
+  max-width: 18vw;
   padding: 0.3rem;
   box-sizing: border-box;
   background-color: white;
   border-radius: 5px;
   padding-top: 1rem;
+  box-shadow: 1px 1px 1px 1px black;
   li{
     padding:.3rem 0;
     ul{

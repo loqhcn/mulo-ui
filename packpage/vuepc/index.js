@@ -70,6 +70,7 @@ import Drawer from './drawer'
 
 
 const install = function (Vue) {
+
     Vue.use(Toast);
     Vue.use(Icon);
     Vue.use(Button);
@@ -106,10 +107,9 @@ const install = function (Vue) {
     Vue.use(Avatar);
     //notice
     Vue.use(Alert);
-    Vue.use(Loading);
-    Vue.use(Message);
-    Vue.use(MessageBox);
-    Vue.use(Notification);
+    
+
+
     //Navigation导航
     Vue.use(Menu);
     Vue.use(Breadcrumb);
@@ -130,6 +130,16 @@ const install = function (Vue) {
     Vue.use(Backtop)
     Vue.use(InfiniteScroll)
     Vue.use(Drawer)
+
+    Vue.use(Loading.directive);
+    Vue.prototype.$loading = Loading.service;
+
+    Vue.prototype.$msgbox = MessageBox;
+    Vue.prototype.$alert = MessageBox.alert;
+    Vue.prototype.$confirm = MessageBox.confirm;
+    Vue.prototype.$prompt = MessageBox.prompt;
+    Vue.prototype.$notify = Notification;
+    Vue.prototype.$message = Message;
 
 }
 

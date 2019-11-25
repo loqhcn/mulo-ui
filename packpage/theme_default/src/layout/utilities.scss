@@ -53,3 +53,9 @@
     font-size: ($i / 10) * 1rem;
   }
 }
+
+.child-item-space{
+  &>*{
+    margin: $space-control;
+  }
+}

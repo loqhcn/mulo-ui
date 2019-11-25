@@ -1,11 +1,16 @@
+
 // # 颜色
+
+//默认色调
+$color-bg:#FEFEFE;
+$color-default:rgb(91, 225, 248);
 
 //场景颜色
 $color-success: #67c23a;
 $color-warning: #e6a23c;
 $color-danger: #f56c6c;
 $color-info: #909399;
-$color-default:rgb(243, 132, 57);
+
 $color-primary: #409eff;
 
 //常用颜色
@@ -39,5 +44,5 @@ $radius-default:5px; //默认圆角设置
 // 适配在手机端上面的显示效果
 
 $space-control:0.5rem; //控件见的距离
-
 $space-container:0.6rem; //容器见的间距
+

@@ -13,9 +13,9 @@
 </template>
 <script>
   export default {
-    name: 'OTabPane',
+    name: 'o-tab-pane',
 
-    componentName: 'ElTabPane',
+    componentName: 'OTabPane',
 
     props: {
       label: String,

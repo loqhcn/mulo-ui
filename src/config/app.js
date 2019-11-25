@@ -3,7 +3,9 @@ export default {
 
     //用户系统的链接
     userSystemBaseUrl: "http://user.lqh.cn",
-    apitoolBaseUrl: "http://user.lqh.cn",
+
+    apitoolBaseUrl: "http://user.lqh.cn/apitool/",
+    
     //后台管理系统演示
     baseUrl: "http://www.lqh.cn",
     //swoole

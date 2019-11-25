@@ -17,8 +17,6 @@ instance.interceptors.request.use(function (config) {
 
   //数据修改为fromdata模式提交
 
- 
-
   //请求附带用户认证令牌
   var TOKEN = localStorage.getItem('auth_token');
   if (TOKEN) {

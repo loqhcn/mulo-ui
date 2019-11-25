@@ -42,7 +42,7 @@ Vue.prototype.$axios = axios;
 window.axios = axios;
 window.router = router;
 
-
+//http
 import http_user from './lib/http_user'
 Vue.prototype.$http_user = http_user;
 window.$http_user = http_user;
@@ -50,6 +50,9 @@ window.$http_user = http_user;
 import http_apitool from './lib/http_apitool'
 Vue.prototype.$http_apitool = http_apitool;
 window.$http_apitool = http_apitool;
+
+import http_apitool_tool from './lib/http_apitool_tool'
+window.$apitool = http_apitool_tool;
 
 import http from './lib/http'
 Vue.prototype.$http = http;
