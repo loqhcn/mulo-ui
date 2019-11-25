@@ -1,7 +1,7 @@
-import ElMenu from './menu.vue';
+import ElMenu from './Menu.vue';
 import ElMenuItemGroup from './menu-item-group.vue';
 import ElMenuItem from './menu-item.vue';
-import submenu from './submenu.vue';
+import submenu from './Submenu.vue';
 
 // /* istanbul ignore next */
 // ElMenu.install = function(Vue) {
