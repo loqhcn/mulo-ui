@@ -20,6 +20,9 @@
     text-decoration: none;
   }
 }
+div.btn{
+  height: fit-content;
+}
 
 //场景颜色
 @each $showtype,

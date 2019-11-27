@@ -2,7 +2,10 @@
   <div>
     <div class="flex space-between">
       <div class="btn">项目详情:{{info.name}}</div>
-      <div>
+      <!-- 项目管理 -->
+      <div class="item-margin-5">
+  
+        <router-link class="btn btn-info" to="/apitool/request_log">请求记录</router-link>
         <button @click="del" class="btn">删除项目</button>
         <router-link to="/apitool">
           <button class="btn btn-back">返回</button>
@@ -10,21 +13,23 @@
       </div>
     </div>
 
-    <div class="row">
-
-    </div>
+    <div class="row"></div>
     <div class="flex">
-      <div class="col-8">
+      <div class="col-8 col-md-4">
         api列表
         <ul class="apis">
           <li @click="openApiDetail(index)" v-for="(li,index) in apiList" :key="index">{{li.name}}</li>
+          <button @click="createApi" class="btn btn-primary full">创建api</button>
+          <button  class="btn btn-success full">创建分组</button>
+
         </ul>
       </div>
-      <div class="col-16 panel">
+      <div class="col-16 panel col-md-20">
+        <!-- 接口管理 -->
         <div class="panel-title flex space-between">
           <label for>{{apiInfo.name}}</label>
           <div class="item-margin-1">
-            <button class="btn btn-primary">调试</button>
+            <button @click="openTest()" class="btn btn-primary">调试</button>
             <button class="btn">保存</button>
             <button class="btn btn-danger">删除</button>
           </div>
@@ -48,16 +53,20 @@
 
     <!-- 弹出层 调试api -->
     <api-test-layer ref="test_layer"></api-test-layer>
-
+    <api-edit-layer ref="edit_layer"></api-edit-layer>
 
   </div>
 </template>
 
 <script>
 import ApiTestLayer from "./ApiTestLayer";
+import ApiEditLayer from "./ApiEditLayer";
+
 export default {
   components: {
-    [ApiTestLayer.name]: ApiTestLayer
+    [ApiTestLayer.name]: ApiTestLayer,
+    [ApiEditLayer.name]: ApiEditLayer,
+
   },
   data() {
     return {
@@ -88,6 +97,17 @@ export default {
       });
   },
   methods: {
+    createApi(){
+      this.$refs.edit_layer.visible = true;
+      this.$refs.test_layer.baseUrl = this.info.base_url;
+    },
+    //打开调试
+    openTest() {
+      this.$refs.test_layer.visible = true;
+      this.$refs.test_layer.baseUrl = this.info.base_url;
+      this.$refs.test_layer.url = this.apiInfo.url;
+
+    },
     openApiDetail(index) {
       this.apiInfo = this.apiList[index];
     },

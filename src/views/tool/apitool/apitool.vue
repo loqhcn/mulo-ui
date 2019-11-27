@@ -1,12 +1,11 @@
 <template>
   <div>
-    <head-link></head-link>
+    <!-- <head-link></head-link> -->
     <div class="title">api测试工具</div>
-    <div class="desc-text">提供api的测试体系工具</div>
-
+    <!-- <div class="">提供api的测试体系工具</div> -->
     <router-view></router-view>
 
- 
+    
   </div>
 </template>
 

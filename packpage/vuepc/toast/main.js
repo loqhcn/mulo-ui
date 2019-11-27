@@ -4,6 +4,7 @@ import { PopupManager } from '../../utils/popup';
 
 let mainConstructor = Vue.extend(Main);
 let instance;
+//弹出的实例
 let instances = [];
 let seed = 1;
 
@@ -24,7 +25,7 @@ const mainAction = (options, callback) => {
 
     }
     let id = 'message_' + seed++;
-    //实例
+    //组件实例
     instance = new mainConstructor({
         data: options
     });

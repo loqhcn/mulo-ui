@@ -17,8 +17,8 @@ instance.interceptors.request.use(function (config) {
     //数据修改为fromdata模式提交
     http_apitool.post('api_request/insertLog',{
         url:config.url,
-        params:config.data,
-        baseURL:config.baseURL,
+        params:JSON.stringify(config.data),
+
     })
     //获取项目
 
@@ -27,7 +27,7 @@ instance.interceptors.request.use(function (config) {
     if (TOKEN) {
         config.headers['x-auth-token'] = `${TOKEN}`;
     }
-
+    
     return config;
 }, function (error) {
     // Do something with request error
@@ -37,16 +37,8 @@ instance.interceptors.request.use(function (config) {
 
 // Add a response interceptor
 instance.interceptors.response.use(function (response) {
-    // Do something with response data
-    console.log(response.data);
-    //TODO 判断登录状态
-    if (response.data && response.data.errno) {
-        if (response.data.errno == 777) {
-            router.app.$auth.relogin();
-        }
-    }
-
-    return response.data;
+    
+    return response;
 
 }, function (error) {
     // Do something with response error

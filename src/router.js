@@ -126,6 +126,7 @@ export default new Router({
 
         { path: 'projects_create', component: () => import('./views/tool/apitool/projects-create.vue'), },
         { path: 'projects_detail', component: () => import('./views/tool/apitool/projects-detail.vue'), },
+        { path: 'request_log', component: () => import('./views/tool/apitool/RequestLog.vue'), },
 
 
       ],

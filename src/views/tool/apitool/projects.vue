@@ -3,7 +3,7 @@
 
           <div class="project-item">
               <div class="project-row" @click="detail(li.id)" v-for="(li,index) in list" :key="index">{{li.name}}</div>
-              <button @click="appRoute.go('/apitool/projects_create')">创建</button>
+              <button class="btn" @click="appRoute.go('/apitool/projects_create')">创建</button>
           </div>
     <router-view></router-view>
     </div>

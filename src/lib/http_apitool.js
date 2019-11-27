@@ -22,7 +22,7 @@ instance.interceptors.request.use(function (config) {
   if (TOKEN) {
     config.headers['x-auth-token'] = `${TOKEN}`;
   }
-  console.log(config);
+  // console.log(config);
   return config;
 }, function (error) {
   // Do something with request error
@@ -33,7 +33,7 @@ instance.interceptors.request.use(function (config) {
 // Add a response interceptor
 instance.interceptors.response.use(function (response) {
   // Do something with response data
-  console.log(response.data);
+  // console.log(response.data);
   //TODO 判断登录状态
   if (response.data && response.data.errno) {
     if(response.data.errno==777){
