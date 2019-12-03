@@ -1,11 +1,11 @@
 {
   "name": "mulo-ui",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "mulo-ui 一个vue的前端常用组件库",
   "author": {
     "name": "mulo"
   },
-  "main": "lib/mulo-ui.umd.js",
+  "main": "lib/muloUi.umd.js",
   "files": [
     "packpage",
     "src",
@@ -16,8 +16,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lib": "vue-cli-service build --target lib  --dest lib packpage/vuepc/index.js",
-    "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js"
+    "build:lib": "vue-cli-service build --target lib  --dest lib --name muloUi packpage/vuepc/index.js ",
+    "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js",
+    "build:css": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed"
+
   },
   "dependencies": {
     "deepmerge": "^4.2.2",

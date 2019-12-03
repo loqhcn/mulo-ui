@@ -107,7 +107,7 @@ const install = function (Vue) {
     Vue.use(Avatar);
     //notice
     Vue.use(Alert);
-    
+
 
 
     //Navigation导航
@@ -146,6 +146,7 @@ const install = function (Vue) {
 export default {
     version: '1.12.0',
     install,
+    
     Button,
     Icon,
     Row,
@@ -205,7 +206,7 @@ export default {
     Backtop,
     InfiniteScroll,
     Drawer,
-    
+
 
 };
 

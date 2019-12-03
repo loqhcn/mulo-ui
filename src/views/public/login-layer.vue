@@ -9,7 +9,7 @@
       </div>
       <div class="input-row">
         <label for>密码</label>
-        <input v-model="pass"   class="form-control" type="password" />
+        <input v-model="pass" class="form-control" type="password" />
       </div>
       <div class="login-btns flex space-between">
         <button class="btn login" @click="login()">登录</button>
@@ -51,7 +51,7 @@ export default {
           }
           //TODO 2,取得了access_token交换登录状态
           this.$http_apitool
-            .post("/loginCheck", {
+            .post("loginCheck", {
               access_token: res1.data.access_token
             })
             .then(res => {
@@ -60,7 +60,7 @@ export default {
               }
               //
               localStorage.auth_token = res.data.auth_token;
-              alert('登录成功');
+              return this.$toast("登录成功");
               this.$auth.afterLogin();
             });
         });
