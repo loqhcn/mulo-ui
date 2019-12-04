@@ -8,6 +8,7 @@ Vue.config.productionTip = false
 
 //mulo-ui样式
 import './../packpage/theme_default/src/index.scss'
+import './../packpage/theme_default/src/vuepc.scss'
 //应用内样式
 import './assets/style/app.scss'
 //md文档内部 演示代码 的样式

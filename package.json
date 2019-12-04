@@ -16,9 +16,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lib": "vue-cli-service build --target lib  --dest lib --name muloUi packpage/vuepc/index.js ",
+    "build:lib": "vue-cli-service build --target lib  --dest lib --name muloUiPc packpage/vuepc/index.js ",
     "build:theme": "vue-cli-service build --target lib  --dest lib packpage/vue/index.js",
-    "build:css": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed"
+    "build:css": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed",
+    "build:css@vuepc": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed",
+    "build:css@vuemobile": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed"
+
 
   },
   "dependencies": {

@@ -5,7 +5,6 @@ import Button from './button'
 import Col from './col'
 import Row from './row'
 
-
 import Radio from './radio'
 import Checkbox from './checkbox'
 
@@ -26,7 +25,6 @@ import Update from './upload'
 
 import Rate from './rate'
 import ColorPicker from './color-picker'
-// import Transfer from './transfer'
 import Form from './form'
 
 //data
@@ -64,7 +62,6 @@ import Divider from './divider'
 import Calendar from './calendar'
 import Image from './image'
 import Backtop from './backtop'
-import InfiniteScroll from './infinite-scroll'
 import Drawer from './drawer'
 
 
@@ -128,7 +125,7 @@ const install = function (Vue) {
     Vue.use(Calendar)
     Vue.use(Image)
     Vue.use(Backtop)
-    Vue.use(InfiniteScroll)
+
     Vue.use(Drawer)
 
     Vue.use(Loading.directive);
@@ -146,7 +143,7 @@ const install = function (Vue) {
 export default {
     version: '1.12.0',
     install,
-    
+
     Button,
     Icon,
     Row,
@@ -204,9 +201,6 @@ export default {
     Calendar,
     Image,
     Backtop,
-    InfiniteScroll,
     Drawer,
-
-
 };
 

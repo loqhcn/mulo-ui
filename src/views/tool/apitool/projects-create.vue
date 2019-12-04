@@ -21,13 +21,13 @@
 export default {
   data() {
     return {
-      project_name: ""
+      project_name: "",
     };
   },
   methods: {
     create() {
       this.$http_apitool
-        .post("/apitool/project/create", { name: this.project_name })
+        .post("project/create", { name: this.project_name })
         .then(res => {
           if (res.errno) {
             this.$toast(res.msg);

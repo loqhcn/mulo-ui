@@ -256,10 +256,7 @@ export default {
                     path: 'backtop',
                     name: 'Backtop 回到顶部'
                 },
-                {
-                    path: 'infiniteScroll',
-                    name: 'InfiniteScroll 无限滚动'
-                },
+              
                 {
                     path: 'drawer',
                     name: 'Drawer 抽屉'
