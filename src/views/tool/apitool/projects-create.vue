@@ -21,7 +21,7 @@
 export default {
   data() {
     return {
-      project_name: "",
+      project_name: ""
     };
   },
   methods: {

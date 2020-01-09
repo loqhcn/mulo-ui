@@ -140,7 +140,7 @@ const install = function (Vue) {
 
 }
 
-export default {
+module.exports = {
     version: '1.12.0',
     install,
 

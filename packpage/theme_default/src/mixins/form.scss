@@ -1,0 +1,22 @@
+//生成placeholder兼容
+@mixin placeholder($selecter) {
+  $S: $selecter;
+  .#{$S} {
+    @content;
+  }
+  #{$S}::-webkit-input-placeholder {
+    @content;
+  }
+  #{$S}:-moz-placeholder {
+    @content;
+  }
+  #{$S}::-moz-placeholder {
+    @content;
+  }
+  #{$S}:-ms-input-placeholder {
+    @content;
+  }
+  #{$S}::placeholder {
+    @content;
+  }
+}

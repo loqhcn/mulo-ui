@@ -21,8 +21,6 @@
     "build:css": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed",
     "build:css@vuepc": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed",
     "build:css@vuemobile": "sass ./packpage/theme_default/src/index.scss ./lib/index.css --style compressed"
-
-
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
@@ -41,6 +39,7 @@
   },
   "devDependencies": {
     "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/preset-react": "^7.7.4",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
