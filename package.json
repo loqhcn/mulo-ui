@@ -1,6 +1,6 @@
 {
   "name": "mulo-ui",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "mulo-ui 一个vue的前端常用组件库",
   "author": {
     "name": "mulo"
@@ -26,6 +26,7 @@
     "deepmerge": "^4.2.2",
     "jquery": "^3.4.1",
     "mulo-tools": "^1.0.0",
+    "mulo-ui": "^0.1.15",
     "mulo-validate": "^1.0.0",
     "normalize-wheel": "^1.0.1",
     "popper.js": "^1.16.0",

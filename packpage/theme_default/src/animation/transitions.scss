@@ -1,11 +1,21 @@
+$toggle-time:0.5s;
 //直线过度
 .transition-line {
   transition: width 0.5s, height 0.5s;
 }
-
 .collapse-transition {
   transition: 0.3s height ease-in-out, 0.3s padding-top ease-in-out, 0.3s padding-bottom ease-in-out;
 }
 .horizontal-collapse-transition {
   transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out, 0.3s padding-right ease-in-out;
+}
+
+// 切换动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity $toggle-time ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }

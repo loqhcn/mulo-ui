@@ -140,7 +140,7 @@ const install = function (Vue) {
 
 }
 
-module.exports = {
+let modules = {
     version: '1.12.0',
     install,
 
@@ -204,3 +204,8 @@ module.exports = {
     Drawer,
 };
 
+
+
+
+// module.exports = modules
+export default modules;
