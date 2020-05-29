@@ -1,11 +1,8 @@
-### 序言
+## 项目计划
 
-### 文档地址 
-[文档地址DocUrl ](https://www.kancloud.cn/loqhcn/mulo_code/1242914)
-[官网地址 ](http://mulo-ui.loqh.cn)
+一个简单的常用样式库, 此项目不再作为vue组件库;
 
-### 说明
-一个前端组件库
+
 
 
 
