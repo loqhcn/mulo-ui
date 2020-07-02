@@ -31,7 +31,6 @@ gulp.task('serve', series(sass, function () {
     });
     //编译sass
     gulp.watch("src/css/*.scss", sass);
-    
     //gulp.watch("dist/*.html").on('change', browserSync.stream);
 }));
 

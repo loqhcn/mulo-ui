@@ -1,13 +1,7 @@
 {
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-sass": "^4.1.0"
-  },
   "name": "mulo-ui",
-  "description": "一个简单的常用样式库, 此项目不再作为vue组件库;",
-  "version": "2.0.0",
+  "description": "一个简单的常用样式库",
+  "version": "2.0.2",
   "main": "babel.config.js",
   "directories": {
     "doc": "docs",
@@ -16,6 +10,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.1.0"
   },
   "repository": {
     "type": "git",
